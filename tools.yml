@@ -123,3 +123,10 @@ tools:
   owner: iuc
   tool_panel_section_id: "BEDtools"
 
+
+# add DiffBind
+# add CuffDiff
+# add Trimmomatic
+# add MACS2
+# add FastQC-Groomer
+# add Bam-To-Sam
