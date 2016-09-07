@@ -4,7 +4,7 @@ The [NeuroLINCS Consortium](http://neurolincs.org/) uses Galaxy to perform repro
 
 This image inherits from [bgruening/docker-galaxy-stable](https://github.com/bgruening/docker-galaxy-stable) and adds:
 - Configuration in the form of environment variables.
-- A suite of tools we use, which you can find in [`tools.yml`](https://github.com/zfrenchee/galaxy-neurolincs/blob/master/tools.yml).
+- A suite of tools we use, which you can find in [`tools.yml`](https://github.com/fraenkel-lab/galaxy-neurolincs/blob/master/tools.yml).
 - A custom homepage.
 - An additional set of ports we expose.
 
