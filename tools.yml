@@ -91,10 +91,10 @@ tools:
   tool_panel_section_label: "RNAseq"
   install_resolver_dependencies: True
 
-- name: rgrnastar
-  owner: iuc
-  tool_panel_section_label: "RNAseq"
-  install_resolver_dependencies: True
+# - name: rgrnastar
+#   owner: iuc
+#   tool_panel_section_label: "RNAseq"
+#   install_resolver_dependencies: True
 
 - name: rseqc
   owner: nilesh

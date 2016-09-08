@@ -3,6 +3,7 @@
 docker run -d \
 	--name=galaxy \
 	--restart=on-failure \
+	--privileged=true \
 	-v /home/galaxy/galaxy_storage/:/export/ \
 	-p 80:80 \
 	-p 8021:21 \
