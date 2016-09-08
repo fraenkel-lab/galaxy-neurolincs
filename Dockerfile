@@ -24,11 +24,11 @@ ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
     GALAXY_CONFIG_NEW_USER_DATASET_ACCESS_ROLE_DEFAULT_PRIVATE="True" \
     GALAXY_CONFIG_EXPOSE_USER_NAME="True" \
     GALAXY_CONFIG_EXPOSE_USER_EMAIL="True" \
+    GALAXY_CONFIG_CONDA_AUTO_INSTALL="True" \
+    GALAXY_CONFIG_CONDA_AUTO_INIT="True"
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
 
-# ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
-#     GALAXY_CONFIG_CONDA_AUTO_INIT=True
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
