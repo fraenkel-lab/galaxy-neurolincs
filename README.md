@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/fraenkel-lab/galaxy-neurolincs.svg](https://travis-ci.org/fraenkel-lab/galaxy-neurolincs)
+[![Build Status](https://api.travis-ci.org/fraenkel-lab/galaxy-neurolincs.svg)](https://travis-ci.org/fraenkel-lab/galaxy-neurolincs)
 [![Docker Repository on Quay](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs/status "Docker Repository on Quay")](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs)
 
 
