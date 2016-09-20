@@ -1,3 +1,7 @@
+[![Build Status](https://api.travis-ci.org/fraenkel-lab/galaxy-neurolincs.svg](https://travis-ci.org/fraenkel-lab/galaxy-neurolincs)
+[![Docker Repository on Quay](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs/status "Docker Repository on Quay")](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs)
+
+
 # The NeuroLINCS Galaxy
 
 The [NeuroLINCS Consortium](http://neurolincs.org/) uses Galaxy to perform reproducible computational analysis.
