@@ -43,126 +43,151 @@ tools:
   owner: alenail
   tool_panel_section_label: "ChIPseqUtil"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: pieplot_macs
   owner: alenail
   tool_panel_section_label: "ChIPseqUtil"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 
 - name: bamtools_filter
   owner: devteam
   tool_panel_section_label: "SAMTools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: ngsutils_bam_filter
   owner: iuc
   tool_panel_section_label: "SAMTools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: sam_merge
   owner: devteam
   tool_panel_section_label: "SAMtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: samtool_filter2
   owner: devteam
   tool_panel_section_label: "SAMtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: samtools_idxstats
   owner: devteam
   tool_panel_section_label: "SAMtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: samtools_sort
   owner: devteam
   tool_panel_section_label: "SAMtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: bam_to_sam
   owner: devteam
   tool_panel_section_label: "SAMtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 
 - name: cufflinks
   owner: devteam
   tool_panel_section_label: "RNAseq"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 # - name: rgrnastar
 #   owner: iuc
 #   tool_panel_section_label: "RNAseq"
 #   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: rseqc
   owner: nilesh
   tool_panel_section_label: "RNAseq"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: tophat2
   owner: devteam
   tool_panel_section_label: "RNAseq"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: picard
   owner: devteam
   tool_panel_section_label: "Picard"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: bedtools
   owner: iuc
   tool_panel_section_label: "BEDtools"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: macs2
   owner: iuc
   tool_panel_section_label: "MACS2"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: bed_to_bigwig
   owner: xuebing
   tool_panel_section_label: "BigWig"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: bowtie2
   owner: devteam
   tool_panel_section_label: "Bowtie2"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: deseq2
   owner: iuc
   tool_panel_section_label: "DESeq2"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: fastqc
   owner: devteam
   tool_panel_section_label: "FastQC"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: htseq_count
   owner: lparsons
   tool_panel_section_label: "HTSeq"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: trimmomatic
   owner: pjbriggs
   tool_panel_section_label: "Trimmomatic"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: diffbind
   owner: bgruening
   tool_panel_section_label: "diffbind"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: cuffdiff
   owner: devteam
   tool_panel_section_label: "CuffDiff"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
 - name: fastq_groomer
   owner: devteam
   tool_panel_section_label: "FastQ Groomer"
   install_resolver_dependencies: True
+  install_tool_dependencies: False
 
