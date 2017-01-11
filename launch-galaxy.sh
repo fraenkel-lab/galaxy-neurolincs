@@ -11,6 +11,9 @@ docker run -d \
 	-p 443:443 \
 	-p 8800:8800 \
 	-p 9002:9002 \
+	-e "GALAXY_CONFIG_USER_ACTIVATION_ON=False" \
+	-e "GALAXY_CONFIG_REQUIRE_LOGIN=True" \
+	-e "GALAXY_CONFIG_SHOW_WELCOME_WITH_LOGIN=True" \
 	alenail/galaxy-neurolincs
 
 # for testing (and to keep data from persisting) this command is sufficient:
