@@ -49,10 +49,11 @@ EXPOSE :22
 EXPOSE :8800
 EXPOSE :9002
 
-EXPOSE :2811
-EXPOSE :2223
-EXPOSE :7512
-EXPOSE :50000-51000
+# Expose ports for in-galaxy globus
+# EXPOSE :2811
+# EXPOSE :2223
+# EXPOSE :7512
+# EXPOSE :50000-51000
 
 # Autostart script that is invoked during container start
 CMD ["/usr/bin/startup"]
