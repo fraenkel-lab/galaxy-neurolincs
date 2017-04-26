@@ -1,6 +1,6 @@
 # Galaxy - NeuroLINCS Edition
 #
-# VERSION       0.1
+# VERSION       0.2
 
 FROM bgruening/galaxy-stable
 MAINTAINER Alex LeNail "alex@lenail.org"
