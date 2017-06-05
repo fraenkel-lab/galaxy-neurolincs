@@ -1,8 +1,8 @@
 # Galaxy - NeuroLINCS Edition
 #
-# VERSION       0.2
+# VERSION       0.3
 
-FROM bgruening/galaxy-stable
+FROM quay.io/bgruening/galaxy:17.05
 MAINTAINER Alex LeNail "alex@lenail.org"
 
 ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
@@ -28,6 +28,24 @@ ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
     GALAXY_CONFIG_CONDA_AUTO_INIT="True"
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
+
+RUN cd /root  && \
+    wget https://www.schedmd.com/downloads/archive/slurm-15.08.13.tar.bz2  && \
+    wget https://github.com/dun/munge/archive/munge-0.5.12.tar.gz  && \
+    tar zxf munge-0.5.12.tar.gz  && \
+    tar jxf slurm-15.08.13.tar.bz2  && \
+    cd munge-munge-0.5.12/  && \
+    ./configure --prefix=/usr --sysconfdir=/etc  && \
+    make -j16  && \
+    make install  && \
+    cd ../slurm-15.08.13  && \
+    ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && \
+    make -j16  && \
+    make install  && \
+    pkill munged  && \
+    /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && \
+    dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && \
+    dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
 
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
