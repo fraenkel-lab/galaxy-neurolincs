@@ -29,21 +29,21 @@ ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
 
-RUN cd /root  && echo 'I have made it this far -- 1' && \
-    wget https://www.schedmd.com/downloads/archive/slurm-15.08.13.tar.bz2  && echo 'I have made it this far -- 2' && \
-    wget https://github.com/dun/munge/archive/munge-0.5.12.tar.gz  && echo 'I have made it this far -- 3' && \
-    tar zxf munge-0.5.12.tar.gz  && echo 'I have made it this far -- 4' && \
-    tar jxf slurm-15.08.13.tar.bz2  && echo 'I have made it this far -- 5' && \
-    cd munge-munge-0.5.12/  && echo 'I have made it this far -- 6' && \
-    ./configure --prefix=/usr --sysconfdir=/etc  && echo 'I have made it this far -- 7' && \
-    make -j16  && echo 'I have made it this far -- 8' && \
-    make install  && echo 'I have made it this far -- 9' && \
-    cd ../slurm-15.08.13  && echo 'I have made it this far -- 10' && \
-    ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && echo 'I have made it this far -- 11' && \
-    make -j16  && echo 'I have made it this far -- 12' && \
-    make install  && echo 'I have made it this far -- 13' && \
-    /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && echo 'I have made it this far -- 15' && \
-    dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && echo 'I have made it this far -- 16' && \
+RUN cd /root  && \
+    wget https://www.schedmd.com/downloads/archive/slurm-15.08.13.tar.bz2  && \
+    wget https://github.com/dun/munge/archive/munge-0.5.12.tar.gz  && \
+    tar zxf munge-0.5.12.tar.gz  && \
+    tar jxf slurm-15.08.13.tar.bz2  && \
+    cd munge-munge-0.5.12/  && \
+    ./configure --prefix=/usr --sysconfdir=/etc  && \
+    make -j16  && \
+    make install  && \
+    cd ../slurm-15.08.13  && \
+    ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && \
+    make -j16  && \
+    make install  && \
+    /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && \
+    dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && \
     dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
 
 
