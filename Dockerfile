@@ -42,7 +42,6 @@ RUN cd /root  && echo 'I have made it this far -- 1' && \
     ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && echo 'I have made it this far -- 11' && \
     make -j16  && echo 'I have made it this far -- 12' && \
     make install  && echo 'I have made it this far -- 13' && \
-    pkill munged  && echo 'I have made it this far -- 14' && \
     /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && echo 'I have made it this far -- 15' && \
     dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && echo 'I have made it this far -- 16' && \
     dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
