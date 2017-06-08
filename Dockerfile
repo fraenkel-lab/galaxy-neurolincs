@@ -41,10 +41,10 @@ RUN cd /root  && \
     cd ../slurm-15.08.13  && \
     ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && \
     make -j16  && \
-    make install  && \
-    /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && \
-    dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && \
-    dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
+    make install  # && \
+    # /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && \
+    # dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && \
+    # dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
 
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
