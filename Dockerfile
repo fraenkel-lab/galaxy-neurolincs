@@ -1,51 +1,45 @@
 # Galaxy - NeuroLINCS Edition
 #
-# VERSION       0.3
+# VERSION       0.4
 
 FROM quay.io/bgruening/galaxy:17.05
 MAINTAINER Alex LeNail "alex@lenail.org"
 
-ENV GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
-    GALAXY_CONFIG_SERVE_XSS_VULNERABLE_MIMETYPES="True" \
+ENV GALAXY_CONFIG_BRAND="AnswerALS" \
+
+    GALAXY_VIRTUAL_ENV=/export/galaxy_venv \
+
     GALAXY_CONFIG_ERROR_EMAIL_TO="alex@lenail.org" \
     GALAXY_CONFIG_EMAIL_FROM="alex@lenail.org" \
+
     GALAXY_CONFIG_USER_ACTIVATION_ON="False" \
     GALAXY_CONFIG_ACTIVATION_GRACE_PERIOD="0" \
     GALAXY_CONFIG_INACTIVITY_BOX_CONTENT="Your account has not been activated yet.  Feel free to browse around and see what's available, but you won't be able to upload data or run jobs until you have verified your email address." \
-    GALAXY_CONFIG_USE_NGLIMS="False" \
-    GALAXY_CONFIG_NGLIMS_CONFIG_FILE="tool-data/nglims.yaml" \
-    GALAXY_CONFIG_BRAND="AnswerALS" \
-    GALAXY_CONFIG_USE_INTERACTIVE="False" \
     GALAXY_CONFIG_REQUIRE_LOGIN="True" \
+    GALAXY_CONFIG_SHOW_WELCOME_WITH_LOGIN="True" \
+    GALAXY_CONFIG_EXPOSE_USER_NAME="True" \
+    GALAXY_CONFIG_EXPOSE_USER_EMAIL="True" \
     GALAXY_CONFIG_ALLOW_USER_CREATION="False" \
     GALAXY_CONFIG_ALLOW_USER_DELETION="True" \
     GALAXY_CONFIG_ALLOW_USER_IMPERSONATION="True" \
     GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE="True" \
+    GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE="True" \
     GALAXY_CONFIG_NEW_USER_DATASET_ACCESS_ROLE_DEFAULT_PRIVATE="True" \
-    GALAXY_CONFIG_EXPOSE_USER_NAME="True" \
-    GALAXY_CONFIG_EXPOSE_USER_EMAIL="True" \
+
+    GALAXY_CONFIG_USE_NGLIMS="False" \
+    GALAXY_CONFIG_NGLIMS_CONFIG_FILE="tool-data/nglims.yaml" \
+
+    GALAXY_CONFIG_ENABLE_BETA_TOOL_COMMAND_ISOLATION="True" \
+    GALAXY_CONFIG_SERVE_XSS_VULNERABLE_MIMETYPES="True" \
+
+    GALAXY_CONFIG_USE_INTERACTIVE="False" \
+
     GALAXY_CONFIG_CONDA_AUTO_INSTALL="True" \
     GALAXY_CONFIG_CONDA_AUTO_INIT="True"
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
 
-RUN cd /root  && \
-    wget https://www.schedmd.com/downloads/archive/slurm-15.08.13.tar.bz2  && \
-    wget https://github.com/dun/munge/archive/munge-0.5.12.tar.gz  && \
-    tar zxf munge-0.5.12.tar.gz  && \
-    tar jxf slurm-15.08.13.tar.bz2  && \
-    cd munge-munge-0.5.12/  && \
-    ./configure --prefix=/usr --sysconfdir=/etc  && \
-    make -j16  && \
-    make install  && \
-    cd ../slurm-15.08.13  && \
-    ./configure --prefix=/usr --sysconfdir=/etc/slurm-llnl  && \
-    make -j16  && \
-    make install  # && \
-    # /usr/sbin/munged -f --key-file=/etc/munge/munge.key --num-threads=10  && \
-    # dpkg --get-selections | grep slurm | sed -re 's/install/hold/' | dpkg --set-selections  && \
-    # dpkg --get-selections | grep munge | sed -re 's/install/hold/' | dpkg --set-selections
-
+ENV TERM=xterm
 
 RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
