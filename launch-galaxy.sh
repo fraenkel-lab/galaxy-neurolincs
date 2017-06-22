@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo cp /etc/slurm-llnl/slurm.conf /pool/data/galaxy/
+sudo cp /etc/munge/munge.key /pool/data/galaxy/
+
 docker run -d \
 	--name=galaxy \
 	--restart=on-failure \
