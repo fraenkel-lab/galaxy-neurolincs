@@ -16,7 +16,7 @@ docker run -d \
 	-p 443:443 \
 	-p 8800:8800 \
 	-p 9002:9002 \
-	-e "NONUSE=slurmd,slurmctld"
+	-e "NONUSE=slurmd,slurmctld" \
 	-e "USE_HTTPS_LETSENCRYPT=True" \
 	-e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
 	-e "galaxy_extras_config_condor=False" \
