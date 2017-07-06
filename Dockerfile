@@ -6,8 +6,8 @@ FROM quay.io/bgruening/galaxy:17.05
 MAINTAINER Alex LeNail "alex@lenail.org"
 
 ENV GALAXY_CONFIG_BRAND="AnswerALS" \
-
-    GALAXY_VIRTUAL_ENV=/export/galaxy_venv \
+    # the following doesn't seem to work
+    # GALAXY_VIRTUAL_ENV=/export/galaxy_venv \
 
     GALAXY_CONFIG_ERROR_EMAIL_TO="alex@lenail.org" \
     GALAXY_CONFIG_EMAIL_FROM="alex@lenail.org" \
