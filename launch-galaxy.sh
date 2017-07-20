@@ -10,7 +10,7 @@ docker run -d \
 	-v /pool/data/galaxy/:/export/ \
 	-v /pool/data/globus/:/globus/ \
 	-v /pool/data/galaxy_venv/:/galaxy_venv/ \
-	-v /nfs/:/nfs/ \
+	-v /nfs:/nfs:shared \
 	-p 80:80 \
 	-p 8021:21 \
 	-p 8022:22 \
