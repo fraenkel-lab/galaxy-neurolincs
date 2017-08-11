@@ -34,31 +34,6 @@
 					<br>
 				</section>
 				<iframe width="700" height="415" src="https://www.youtube.com/embed/videoseries?list=PLcbeoFQ0nV3l3cKY1w2PiASLqvbOolPGz" frameborder="0" allowfullscreen></iframe>
-				<section class="post-content">
-					<br>
-					<h3>Notes for Future Administrators of this Galaxy</h3>
-						<p>The following is documentation about how this instance was set up, for future maintainers. </p>
-						<h6>The architecture is as follows:</h6>
-						<ul>
-							<li>There exists an Microsoft Azure VM (a computer) which we rent.</li>
-							<li>On that computer is running a container, which is like a virtual machine, managed by software called docker. The container contains is an implementation of galaxy. This container is portable to other computers and VMs that are not Azure.</li>
-							<li>Inside galaxy we have a set of workflows and tools which provide us the capacity to perform our analyses reproducibly. </li>
-						</ul>
-						<h6>Azure:</h6>
-						<p>Microsoft Azure is a cloud-computing host, providing a variety of services, such as access to "virtual machines" which are computational "real-estate" in Microsoft's datacenters.</p>
-						<p>We've set up a "D2_V2" virtual machine. It has an IP address of <code>13.68.103.194</code>, which you can use with <code>ssh</code> or <code>ftp</code>. The program <code>ssh</code> allows you to connect to the virtual machine via the command line and operate the machine. Azure's web portal will also allow you to configure the machine. The VM runs <code>Ubuntu 16.04 LTS</code> as the operating system.</p>
-						<h6>Docker:</h6>
-						<p>After settig up the VM and using <code>ssh</code> to connect to it, I installed <a href="https://docs.docker.com">docker</a> which describes itself as "An open platform for distributed applications for developers and sysadmins". The principal advantage of using docker is that <a href="https://github.com/bgruening">Björn Grüning</a> built a <a href="https://github.com/bgruening/docker-galaxy-stable">"dockerized" version of galaxy</a>, which can run on any machine that can run docker. The Galaxy ecosystem of tools has a component named "cloudman" which makes it quite easy to set up galaxy on Amazon Web Services, but it seems difficult to set up galaxy on other platforms, but by using docker as an intermediary, setting up Galaxy on any system becomes as trivially simple. </p>
-						<p>I found documentation for intalling Docker <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">here</a> and instructions to run galaxy using docker <a href="https://github.com/bgruening/docker-galaxy-stable/blob/master/README.md">here</a>. </p>
-						<blockquote>
-							<p>Quick note: once you follow these steps, it's also important to go to the Azure web portal and make sure that the inbound and outbound rules on the network security group that the VM is in are correctly established so that the VM is willing to accept web traffic. The default setting of an Azure VM is to be closed to web traffic, so you'll need to add rules on the network security group that permitactivity on ports 80, as well as any other ports you'd like to access on the VM.</p>
-							<p>Quick note: You may run into <a href="https://github.com/docker/docker/issues/17645">this issue</a>, but the first comment solvedmy problem. </p>
-						</blockquote>
-						<h5>Installing tools:</h5>
-						<p>Installing tools is done in the conventional way, but once a tool has been successfully installed, make sure to  </p>
-						<pre><code>$ docker exec &lt;container-id&gt; supervisorctl restart galaxy:
-						</code></pre>
-				</section>
 			</article>
 		</main>
 	</div>
