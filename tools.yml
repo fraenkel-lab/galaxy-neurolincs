@@ -36,22 +36,6 @@
 #  * install_repository_dependencies: True or False - whether to install repo
 #                               dependencies or not. (default: True)
 
-# api_key: '5c80b14965b317f57d4601cf447aa213'
-# galaxy_instance: '13.92.89.3'
-tools:
-- name: map_to_known_genes
-  owner: alenail
-  tool_panel_section_label: "ChIPseqUtil"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: pieplot_macs
-  owner: alenail
-  tool_panel_section_label: "ChIPseqUtil"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-
 - name: bamtools_filter
   owner: devteam
   tool_panel_section_label: "SAMTools"
