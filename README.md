@@ -29,9 +29,10 @@ Using galaxy, we publish our computational tools, both on github and the galaxy 
 The following is documentation about how this instance was set up, for future maintainers.
 
 ### The architecture is as follows:
-	- There exists an Microsoft Azure VM (a computer) which we rent.
-	- On that computer is running a container, which is like a virtual machine, managed by software called docker. The container contains is an implementation of galaxy. This container is portable to other computers and VMs that are not Azure.
-	- Inside galaxy we have a set of workflows and tools which provide us the capacity to perform our analyses reproducibly.
+
+- There exists an Microsoft Azure VM (a computer) which we rent.
+- On that computer is running a container, which is like a virtual machine, managed by software called docker. The container contains is an implementation of galaxy. This container is portable to other computers and VMs that are not Azure.
+- Inside galaxy we have a set of workflows and tools which provide us the capacity to perform our analyses reproducibly.
 
 ### Azure:
 
@@ -53,5 +54,5 @@ I found documentation for intalling Docker [here](https://docs.docker.com/engine
 Installing tools is done in the conventional way, but once a tool has been successfully installed, make sure to
 
 ```
-$ docker exec &lt;container-id&gt; supervisorctl restart galaxy:
+$ docker exec <container-id> supervisorctl restart galaxy:
 ```
