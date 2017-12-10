@@ -36,6 +36,7 @@
 #  * install_repository_dependencies: True or False - whether to install repo
 #                               dependencies or not. (default: True)
 
+tools:
 - name: bamtools_filter
   owner: devteam
   tool_panel_section_label: "SAMTools"
