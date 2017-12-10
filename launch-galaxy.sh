@@ -10,7 +10,6 @@ docker run -d \
 	-v /pool/data/galaxy/:/export/ \
 	-v /pool/data/globus/:/globus/ \
 	-v /pool/data/galaxy_venv/:/galaxy_venv/ \
-	-v /nfs:/nfs:shared \
 	-p 80:80 \
 	-p 8021:21 \
 	-p 8022:22 \
@@ -20,7 +19,7 @@ docker run -d \
 	-e "NONUSE=slurmd,slurmctld" \
 	-e "USE_HTTPS_LETSENCRYPT=True" \
 	-e "GALAXY_ROOT=/export/galaxy-central" \
-        -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
+    -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
 	-e "galaxy_extras_config_condor=False" \
 	-e "galaxy_extras_config_condor_docker=False" \
 	quay.io/fraenkel_lab/galaxy-neurolincs
