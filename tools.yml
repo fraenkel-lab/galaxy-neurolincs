@@ -37,137 +37,927 @@
 #                               dependencies or not. (default: True)
 
 tools:
-- name: bamtools_filter
+- name: samtools_sort
   owner: devteam
   tool_panel_section_label: "SAMTools"
+  panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "cab3f8d35989"
+  # version: "2.0.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fsamtools_sort%2Fsamtools_sort%2F2.0.1",
 
 - name: ngsutils_bam_filter
   owner: iuc
   tool_panel_section_label: "SAMTools"
+  panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "7a68005de299"
+  # version: "0.5.8.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/ngsutils_bam_filter/ngsutils_bam_filter/0.5.8.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fngsutils_bam_filter%2Fngsutils_bam_filter%2F0.5.8.1",
 
 - name: sam_merge
   owner: devteam
-  tool_panel_section_label: "SAMtools"
+  tool_panel_section_label: "SAMTools"
+  panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
-
-- name: samtool_filter2
-  owner: devteam
-  tool_panel_section_label: "SAMtools"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: samtools_idxstats
-  owner: devteam
-  tool_panel_section_label: "SAMtools"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: samtools_sort
-  owner: devteam
-  tool_panel_section_label: "SAMtools"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: bam_to_sam
-  owner: devteam
-  tool_panel_section_label: "SAMtools"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-
-- name: cufflinks
-  owner: devteam
-  tool_panel_section_label: "RNAseq"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-
-- name: rseqc
-  owner: nilesh
-  tool_panel_section_label: "RNAseq"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: tophat2
-  owner: devteam
-  tool_panel_section_label: "RNAseq"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: picard
-  owner: devteam
-  tool_panel_section_label: "Picard"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: bedtools
-  owner: iuc
-  tool_panel_section_label: "BEDtools"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: macs2
-  owner: iuc
-  tool_panel_section_label: "MACS2"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: bed_to_bigwig
-  owner: xuebing
-  tool_panel_section_label: "BigWig"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: bowtie2
-  owner: devteam
-  tool_panel_section_label: "Bowtie2"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-
-- name: deseq2
-  owner: iuc
-  tool_panel_section_label: "DESeq2"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
+  revisions:
+  - "1977f1637890"
+  # version: "1.2.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/1.2.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fsam_merge%2Fsam_merge2%2F1.2.0",
 
 - name: fastqc
   owner: devteam
   tool_panel_section_label: "FastQC"
+  panel_section_id: "fastqc"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "9337dd1fbc66"
+  # version: "0.69"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ffastqc%2Ffastqc%2F0.69",
+
+- name: tophat2
+  owner: devteam
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "16c4255042be"
+  # version: "2.1.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/tophat2/tophat2/2.1.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ftophat2%2Ftophat2%2F2.1.1",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_deletion_profile/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_deletion_profile%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage2/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_geneBody_coverage2%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_NVC/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_NVC%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_FPKM_count/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_FPKM_count%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_RPKM_saturation/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_RPKM_saturation%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam_stat/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_bam_stat%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_duplication/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_duplication%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_infer_experiment/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_infer_experiment%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_junction_annotation/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_junction_annotation%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_GC/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_GC%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_insertion_profile/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_insertion_profile%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_junction_saturation/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_junction_saturation%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_bam2wig%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_RNA_fragment_size/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_RNA_fragment_size%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_clipping_profile/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_clipping_profile%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_quality/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_quality%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_hexamer/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_hexamer%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_mismatch_profile/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_mismatch_profile%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_distribution/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_read_distribution%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_tin/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_tin%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_geneBody_coverage%2F2.6.4",
+
+- name: rseqc
+  owner: nilesh
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "09846d5169fa"
+  # version: "2.6.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_inner_distance/2.6.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_inner_distance%2F2.6.4",
+
+- name: cufflinks
+  owner: devteam
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "e04dbae2abe0"
+  # version: "2.2.1.2"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/cufflinks/cufflinks/2.2.1.2"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fcufflinks%2Fcufflinks%2F2.2.1.2",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicatesWithMateCigar/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MarkDuplicatesWithMateCigar%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_ReorderSam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_ReorderSam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MarkDuplicates%2F2.7.1.1",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SortSam/2.7.1.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_SortSam%2F2.7.1.1",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_AddOrReplaceReadGroups/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_AddOrReplaceReadGroups%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_QualityScoreDistribution/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_QualityScoreDistribution%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CleanSam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CleanSam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MeanQualityByCycle/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MeanQualityByCycle%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CollectBaseDistributionByCycle/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CollectBaseDistributionByCycle%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_NormalizeFasta/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_NormalizeFasta%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_EstimateLibraryComplexity/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_EstimateLibraryComplexity%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CASM/2.7.1.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CASM%2F2.7.1.1",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CollectWgsMetrics/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CollectWgsMetrics%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FastqToSam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_FastqToSam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MergeBamAlignment/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MergeBamAlignment%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FilterSamReads/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_FilterSamReads%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_ValidateSamFile/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_ValidateSamFile%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_RevertOriginalBaseQualitiesAndAddMateCigar/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_RevertOriginalBaseQualitiesAndAddMateCigar%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.1"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CollectRnaSeqMetrics/2.7.1.1"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CollectRnaSeqMetrics%2F2.7.1.1",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CollectGcBiasMetrics/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CollectGcBiasMetrics%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_DownsampleSam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_DownsampleSam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_RevertSam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_RevertSam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_BedToIntervalList/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_BedToIntervalList%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MergeSamFiles/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MergeSamFiles%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_FixMateInformation/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_FixMateInformation%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_AddCommentsToBam/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_AddCommentsToBam%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_CollectInsertSizeMetrics/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_CollectInsertSizeMetrics%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_ReplaceSamHeader/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_ReplaceSamHeader%2F2.7.1.0",
+
+- name: picard
+  owner: devteam
+  tool_panel_section_label: "Picard"
+  panel_section_id: "picard"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "fc288950c3b7"
+  # version: "2.7.1.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_SamToFastq/2.7.1.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_SamToFastq%2F2.7.1.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgcmp/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_bdgcmp%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgbroadcall/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_bdgbroadcall%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_refinepeak/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_refinepeak%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgpeakcall/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_bdgpeakcall%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_predictd/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_predictd%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_callpeak%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_filterdup/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_filterdup%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_randsample/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_randsample%2F2.1.1.20160309.0",
+
+- name: macs2
+  owner: iuc
+  tool_panel_section_label: "MACS2"
+  panel_section_id: "macs2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "f5d67c722d67"
+  # version: "2.1.1.20160309.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgdiff/2.1.1.20160309.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_bdgdiff%2F2.1.1.20160309.0",
+
+- name: bed_to_bigwig
+  owner: xuebing
+  tool_panel_section_label: "BigWig"
+  panel_section_id: "bigwig"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "4e9e1625dae3"
+  # version: "1.0.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/xuebing/bed_to_bigwig/bed_to_bigwig/1.0.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fxuebing%2Fbed_to_bigwig%2Fbed_to_bigwig%2F1.0.0",
+
+- name: bowtie2
+  owner: devteam
+  tool_panel_section_label: "Bowtie2"
+  panel_section_id: "bowtie2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "8ccbdbe9a695"
+  # version: "2.3.2.2"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fbowtie2%2Fbowtie2%2F2.3.2.2",
+
+- name: deseq2
+  owner: iuc
+  tool_panel_section_label: "DESeq2"
+  panel_section_id: "deseq2"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "6f91b8ce6e07"
+  # version: "2.11.39"
+  # id: "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fdeseq2%2Fdeseq2%2F2.11.39",
+
+- name: fastqc
+  owner: devteam
+  tool_panel_section_label: "FastQC"
+  panel_section_id: "fastqc"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "9337dd1fbc66"
+  # version: "0.69"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ffastqc%2Ffastqc%2F0.69",
 
 - name: htseq_count
   owner: lparsons
   tool_panel_section_label: "HTSeq"
+  panel_section_id: "htseq"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "620d5603d1a8"
+  # version: "0.6.1galaxy3"
+  # id: "toolshed.g2.bx.psu.edu/repos/lparsons/htseq_count/htseq_count/0.6.1galaxy3"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Flparsons%2Fhtseq_count%2Fhtseq_count%2F0.6.1galaxy3",
 
 - name: trimmomatic
   owner: pjbriggs
   tool_panel_section_label: "Trimmomatic"
+  panel_section_id: "trimmomatic"
   install_resolver_dependencies: True
   install_tool_dependencies: False
-
-- name: diffbind
-  owner: bgruening
-  tool_panel_section_label: "diffbind"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
+  revisions:
+  - "53af7b5b1b56"
+  # version: "0.36.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fpjbriggs%2Ftrimmomatic%2Ftrimmomatic%2F0.36.4",
 
 - name: cuffdiff
   owner: devteam
   tool_panel_section_label: "CuffDiff"
+  panel_section_id: "cuffdiff"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "d3ae7d9c2202"
+  # version: "2.2.1.5"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/cuffdiff/cuffdiff/2.2.1.5"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fcuffdiff%2Fcuffdiff%2F2.2.1.5",
 
 - name: fastq_groomer
   owner: devteam
   tool_panel_section_label: "FastQ Groomer"
+  panel_section_id: "fastq_groomer"
   install_resolver_dependencies: True
   install_tool_dependencies: False
+  revisions:
+  - "e4d28c94242d"
+  # version: "1.0.4"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.0.4"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ffastq_groomer%2Ffastq_groomer%2F1.0.4",
+
+- name: bwa
+  owner: devteam
+  tool_panel_section_label: "bwa"
+  panel_section_id: "bwa"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "4d82cf59895e"
+  # version: "0.7.16.2"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.7.16.2"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fbwa%2Fbwa%2F0.7.16.2",
+
+- name: bwa
+  owner: devteam
+  tool_panel_section_label: "bwa"
+  panel_section_id: "bwa"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "4d82cf59895e"
+  # version: "0.7.16.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.16.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fbwa%2Fbwa_mem%2F0.7.16.0",
+
+- name: ms_data_converter
+  owner: galaxyp
+  tool_panel_section_label: "Mass-Spec"
+  panel_section_id: "mass-spec"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "a36e9f847308"
+  # version: "1.3.0"
+  # id: "toolshed.g2.bx.psu.edu/repos/galaxyp/ms_data_converter/ms_data_converter/1.3.0"
+  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fgalaxyp%2Fms_data_converter%2Fms_data_converter%2F1.3.0",
 
