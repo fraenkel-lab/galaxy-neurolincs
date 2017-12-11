@@ -6,8 +6,6 @@ FROM quay.io/bgruening/galaxy:17.05
 MAINTAINER Alex LeNail "alex@lenail.org"
 
 ENV GALAXY_CONFIG_BRAND="AnswerALS" \
-    # the following doesn't seem to work
-    # GALAXY_VIRTUAL_ENV=/export/galaxy_venv \
 
     GALAXY_CONFIG_ERROR_EMAIL_TO="alex@lenail.org" \
     GALAXY_CONFIG_EMAIL_FROM="alex@lenail.org" \
@@ -52,6 +50,7 @@ RUN mkdir -p $GALAXY_HOME/workflows
 ADD ./workflows/* $GALAXY_HOME/workflows/
 RUN workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
+# Configure Galaxy Homepage
 ADD ./welcome.html $GALAXY_CONFIG_DIR/web/welcome.html
 ADD ./welcome_banner.png $GALAXY_CONFIG_DIR/web/welcome_banner.png
 
