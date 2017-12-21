@@ -963,7 +963,7 @@ tools:
 
 - name: diffbind
   owner: bgruening
-  panel_section_name: "ATACseq"
+  tool_panel_section_label: "ATACseq"
   panel_section_id: "atacseq"
   install_resolver_dependencies: True
   install_tool_dependencies: False
