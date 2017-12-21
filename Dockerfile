@@ -33,7 +33,9 @@ ENV GALAXY_CONFIG_BRAND="AnswerALS" \
     GALAXY_CONFIG_USE_INTERACTIVE="False" \
 
     GALAXY_CONFIG_CONDA_AUTO_INSTALL="True" \
-    GALAXY_CONFIG_CONDA_AUTO_INIT="True"
+    GALAXY_CONFIG_CONDA_AUTO_INIT="True" \
+
+    EXPORT_DIR_PREFIX="/pool/data/globus/"
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
 
