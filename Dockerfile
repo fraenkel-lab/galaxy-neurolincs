@@ -2,7 +2,7 @@
 #
 # VERSION       0.4
 
-FROM quay.io/bgruening/galaxy:17.05
+FROM quay.io/bgruening/galaxy:17.09
 MAINTAINER Alex LeNail "alex@lenail.org"
 
 ENV GALAXY_CONFIG_BRAND="AnswerALS" \
