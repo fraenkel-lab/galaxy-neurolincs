@@ -962,7 +962,7 @@ tools:
   # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fbgruening%2Fdiffbind%2Fdiffbind%2F2.2.2"
 
 - name: idr
-  owner: iuc,
+  owner: iuc
   tool_panel_section_label: "ATACseq"
   panel_section_id: "atacseq"
   install_resolver_dependencies: True
