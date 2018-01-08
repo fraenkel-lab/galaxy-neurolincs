@@ -16,7 +16,7 @@
             "outputs": [], 
             "position": {
                 "left": 231, 
-                "top": 251.5
+                "top": 200.734375
             }, 
             "tool_id": null, 
             "tool_state": "{\"collection_type\": \"list\"}", 
@@ -47,8 +47,8 @@
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 1270.171875, 
-                "top": 362.390625
+                "left": 1544.15625, 
+                "top": 379.609375
             }, 
             "tool_id": null, 
             "tool_state": "{\"name\": \"Naked DNA File\"}", 
@@ -65,9 +65,36 @@
         }, 
         "2": {
             "annotation": "", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "content_id": null, 
             "errors": null, 
             "id": 2, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "encode blacklist regions", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 1824.65625, 
+                "top": 690.90625
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "5e036141-66dc-4018-81ce-d408d5718669", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "c8ff905d-da0c-488c-bb28-bca12d259f60"
+                }
+            ]
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4", 
+            "errors": null, 
+            "id": 3, 
             "input_connections": {
                 "readtype|fastq_in": {
                     "id": 0, 
@@ -114,7 +141,7 @@
             ], 
             "position": {
                 "left": 466, 
-                "top": 251.03125
+                "top": 200.265625
             }, 
             "post_job_actions": {
                 "HideDatasetActionfastq_out": {
@@ -166,14 +193,14 @@
             "uuid": "ab8cb423-f6d1-4b0e-817d-aa7a2ab4f6e5", 
             "workflow_outputs": []
         }, 
-        "3": {
+        "4": {
             "annotation": "", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2", 
             "errors": null, 
-            "id": 3, 
+            "id": 4, 
             "input_connections": {
                 "library|input_1": {
-                    "id": 2, 
+                    "id": 3, 
                     "output_name": "fastq_out"
                 }
             }, 
@@ -217,7 +244,7 @@
             ], 
             "position": {
                 "left": 681.359375, 
-                "top": 250.765625
+                "top": 200
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -270,14 +297,14 @@
                 }
             ]
         }, 
-        "4": {
+        "5": {
             "annotation": "", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/ngsutils_bam_filter/ngsutils_bam_filter/0.5.8.1", 
             "errors": null, 
-            "id": 4, 
+            "id": 5, 
             "input_connections": {
                 "infile": {
-                    "id": 3, 
+                    "id": 4, 
                     "output_name": "output"
                 }
             }, 
@@ -304,8 +331,8 @@
                 }
             ], 
             "position": {
-                "left": 975.171875, 
-                "top": 251.390625
+                "left": 975.15625, 
+                "top": 200.609375
             }, 
             "post_job_actions": {
                 "DeleteIntermediatesActionoutfile": {
@@ -332,14 +359,14 @@
             "uuid": "fb15a246-29b7-424d-b51b-59683945098a", 
             "workflow_outputs": []
         }, 
-        "5": {
+        "6": {
             "annotation": "", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.1", 
             "errors": null, 
-            "id": 5, 
+            "id": 6, 
             "input_connections": {
                 "input1": {
-                    "id": 4, 
+                    "id": 5, 
                     "output_name": "outfile"
                 }
             }, 
@@ -359,7 +386,7 @@
             ], 
             "position": {
                 "left": 1265.609375, 
-                "top": 249.921875
+                "top": 201.15625
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
@@ -381,19 +408,78 @@
             "uuid": "d31c0665-57c1-4859-a389-1a95a8ab6e1f", 
             "workflow_outputs": []
         }, 
-        "6": {
+        "7": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "inputFile": {
+                    "id": 6, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MarkDuplicates", 
+                    "name": "inputFile"
+                }
+            ], 
+            "label": null, 
+            "name": "MarkDuplicates", 
+            "outputs": [
+                {
+                    "name": "metrics_file", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outFile", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1450.65625, 
+                "top": 223.90625
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFile"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.7.1.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "fc288950c3b7", 
+                "name": "picard", 
+                "owner": "devteam", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"duplicate_scoring_strategy\": \"\\\"SUM_OF_BASE_QUALITIES\\\"\", \"remove_duplicates\": \"\\\"true\\\"\", \"read_name_regex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*.\\\"\", \"barcode_tag\": \"\\\"\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"validation_stringency\": \"\\\"LENIENT\\\"\", \"comments\": \"[]\", \"assume_sorted\": \"\\\"true\\\"\", \"optical_duplicate_pixel_distance\": \"\\\"100\\\"\", \"inputFile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "2.7.1.1", 
+            "type": "tool", 
+            "uuid": "abfb9e71-3108-4405-aa1f-b012f5093486", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "metrics_file", 
+                    "uuid": "a395fb81-c102-45eb-a7ee-1392236f9308"
+                }
+            ]
+        }, 
+        "8": {
             "annotation": "", 
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0", 
             "errors": null, 
-            "id": 6, 
+            "id": 8, 
             "input_connections": {
                 "input_control_file": {
                     "id": 1, 
                     "output_name": "output"
                 }, 
                 "input_treatment_file": {
-                    "id": 5, 
-                    "output_name": "output1"
+                    "id": 7, 
+                    "output_name": "outFile"
                 }
             }, 
             "inputs": [
@@ -447,8 +533,8 @@
                 }
             ], 
             "position": {
-                "left": 1453.5, 
-                "top": 282.171875
+                "left": 1737.5, 
+                "top": 301.40625
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_broadpeaks": {
@@ -509,7 +595,64 @@
             "type": "tool", 
             "uuid": "2697b91c-adbd-495d-b358-691a2c333b67", 
             "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.27.0.0", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "inputA": {
+                    "id": 8, 
+                    "output_name": "output_narrowpeaks"
+                }, 
+                "inputB": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Intersect intervals", 
+                    "name": "inputB"
+                }, 
+                {
+                    "description": "runtime parameter for tool Intersect intervals", 
+                    "name": "inputA"
+                }
+            ], 
+            "label": null, 
+            "name": "Intersect intervals", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 2016.65625, 
+                "top": 446.90625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.27.0.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "a8eabd2838f6", 
+                "name": "bedtools", 
+                "owner": "iuc", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"count\": \"\\\"false\\\"\", \"__page__\": null, \"reciprocal\": \"\\\"false\\\"\", \"overlap_mode\": \"[\\\"-wa\\\"]\", \"invert\": \"\\\"true\\\"\", \"inputB\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"header\": \"\\\"false\\\"\", \"inputA\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"split\": \"\\\"false\\\"\", \"fraction\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"strand\": \"\\\"\\\"\", \"once\": \"\\\"false\\\"\"}", 
+            "tool_version": "2.27.0.0", 
+            "type": "tool", 
+            "uuid": "110e845b-8a4f-4f0b-9eb0-dbb02ff27489", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "e68e031c-9dd9-4680-963e-03a67535fa3c"
+                }
+            ]
         }
     }, 
-    "uuid": "27e36332-cbea-4289-9f93-82f1023d1db3"
+    "uuid": "77cf3828-79e5-4106-9924-270fdd3b4295"
 }
