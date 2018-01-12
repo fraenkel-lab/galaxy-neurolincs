@@ -16,7 +16,7 @@
             "outputs": [], 
             "position": {
                 "left": 231, 
-                "top": 200.734375
+                "top": 217.484375
             }, 
             "tool_id": null, 
             "tool_state": "{\"collection_type\": \"list\"}", 
@@ -48,7 +48,7 @@
             "outputs": [], 
             "position": {
                 "left": 1544.15625, 
-                "top": 379.609375
+                "top": 396.359375
             }, 
             "tool_id": null, 
             "tool_state": "{\"name\": \"Naked DNA File\"}", 
@@ -75,7 +75,7 @@
             "outputs": [], 
             "position": {
                 "left": 1824.65625, 
-                "top": 690.90625
+                "top": 707.65625
             }, 
             "tool_id": null, 
             "tool_state": "{}", 
@@ -141,7 +141,7 @@
             ], 
             "position": {
                 "left": 466, 
-                "top": 200.265625
+                "top": 217.015625
             }, 
             "post_job_actions": {
                 "HideDatasetActionfastq_out": {
@@ -244,7 +244,7 @@
             ], 
             "position": {
                 "left": 681.359375, 
-                "top": 200
+                "top": 216.75
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -332,7 +332,7 @@
             ], 
             "position": {
                 "left": 975.15625, 
-                "top": 200.609375
+                "top": 217.359375
             }, 
             "post_job_actions": {
                 "DeleteIntermediatesActionoutfile": {
@@ -386,7 +386,7 @@
             ], 
             "position": {
                 "left": 1265.609375, 
-                "top": 201.15625
+                "top": 217.90625
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
@@ -439,7 +439,7 @@
             ], 
             "position": {
                 "left": 1450.65625, 
-                "top": 223.90625
+                "top": 240.65625
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutFile": {
@@ -469,15 +469,15 @@
         }, 
         "8": {
             "annotation": "", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.1", 
             "errors": null, 
             "id": 8, 
             "input_connections": {
-                "input_control_file": {
+                "control|c_multiple|input_control_file": {
                     "id": 1, 
                     "output_name": "output"
                 }, 
-                "input_treatment_file": {
+                "treatment|input_treatment_file": {
                     "id": 7, 
                     "output_name": "outFile"
                 }
@@ -485,11 +485,7 @@
             "inputs": [
                 {
                     "description": "runtime parameter for tool MACS2 callpeak", 
-                    "name": "input_control_file"
-                }, 
-                {
-                    "description": "runtime parameter for tool MACS2 callpeak", 
-                    "name": "input_treatment_file"
+                    "name": "treatment"
                 }
             ], 
             "label": null, 
@@ -533,8 +529,8 @@
                 }
             ], 
             "position": {
-                "left": 1737.5, 
-                "top": 301.40625
+                "left": 1735.890625, 
+                "top": 317.5
             }, 
             "post_job_actions": {
                 "HideDatasetActionoutput_broadpeaks": {
@@ -583,17 +579,17 @@
                     "output_name": "output_treat_pileup"
                 }
             }, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.0", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.1.1.20160309.1", 
             "tool_shed_repository": {
-                "changeset_revision": "f5d67c722d67", 
+                "changeset_revision": "e8a060164e11", 
                 "name": "macs2", 
                 "owner": "iuc", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"__page__\": null, \"effective_genome_size_options\": \"{\\\"effective_genome_size_options_selector\\\": \\\"2451960000\\\", \\\"__current_case__\\\": 0}\", \"bampe\": \"\\\"false\\\"\", \"input_control_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"band_width\": \"\\\"300\\\"\", \"cutoff_options\": \"{\\\"cutoff_options_selector\\\": \\\"qvalue\\\", \\\"qvalue\\\": \\\"0.05\\\", \\\"__current_case__\\\": 1}\", \"advanced_options\": \"{\\\"advanced_options_selector\\\": \\\"off\\\", \\\"__current_case__\\\": 1}\", \"input_treatment_file\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"nomodel_type\": \"{\\\"nomodel_type_selector\\\": \\\"create_model\\\", \\\"__current_case__\\\": 0}\", \"mfold\": \"{\\\"upper\\\": \\\"50\\\", \\\"lower\\\": \\\"5\\\"}\", \"outputs\": \"[\\\"peaks_tabular\\\", \\\"summits\\\", \\\"bdg\\\", \\\"html\\\", \\\"pdf\\\"]\"}", 
-            "tool_version": "2.1.1.20160309.0", 
+            "tool_state": "{\"control\": \"{\\\"c_multiple\\\": {\\\"input_control_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"c_multi_select\\\": \\\"No\\\", \\\"__current_case__\\\": 0}, \\\"__current_case__\\\": 0, \\\"c_select\\\": \\\"Yes\\\"}\", \"__page__\": null, \"effective_genome_size_options\": \"{\\\"effective_genome_size_options_selector\\\": \\\"2451960000\\\", \\\"__current_case__\\\": 0}\", \"bampe\": \"\\\"false\\\"\", \"outputs\": \"[\\\"peaks_tabular\\\", \\\"summits\\\", \\\"bdg\\\", \\\"html\\\", \\\"pdf\\\"]\", \"__rerun_remap_job_id__\": null, \"cutoff_options\": \"{\\\"cutoff_options_selector\\\": \\\"qvalue\\\", \\\"qvalue\\\": \\\"0.05\\\", \\\"__current_case__\\\": 1}\", \"advanced_options\": \"{\\\"advanced_options_selector\\\": \\\"off\\\", \\\"__current_case__\\\": 1}\", \"treatment\": \"{\\\"input_treatment_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 0, \\\"t_multi_select\\\": \\\"No\\\"}\", \"nomodel_type\": \"{\\\"nomodel_type_selector\\\": \\\"create_model\\\", \\\"__current_case__\\\": 0}\", \"mfold\": \"{\\\"upper\\\": \\\"50\\\", \\\"lower\\\": \\\"5\\\"}\", \"band_width\": \"\\\"300\\\"\"}", 
+            "tool_version": "2.1.1.20160309.1", 
             "type": "tool", 
-            "uuid": "2697b91c-adbd-495d-b358-691a2c333b67", 
+            "uuid": "927427cd-64db-44c1-9b4b-a1da5761115a", 
             "workflow_outputs": []
         }, 
         "9": {
@@ -630,8 +626,8 @@
                 }
             ], 
             "position": {
-                "left": 2016.65625, 
-                "top": 446.90625
+                "left": 2011.65625, 
+                "top": 465.65625
             }, 
             "post_job_actions": {}, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.27.0.0", 
@@ -654,5 +650,5 @@
             ]
         }
     }, 
-    "uuid": "77cf3828-79e5-4106-9924-270fdd3b4295"
+    "uuid": "496d6d7e-cfef-42b4-a2df-2debc471a8c4"
 }
