@@ -277,4 +277,11 @@ tools:
   # "id": "toolshed.g2.bx.psu.edu/repos/iuc/idr/idr/2.0.3",
   # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fidr%2Fidr%2F2.0.3",
 
-
+- name: bedtools
+  owner: iuc
+  tool_panel_section_label: "BEDtools"
+  panel_section_id: "bedtools"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "a8eabd2838f6"
