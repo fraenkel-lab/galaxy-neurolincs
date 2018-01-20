@@ -1,5 +1,4 @@
 [![Docker Repository on Quay](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs/status "Docker Repository on Quay")](https://quay.io/repository/fraenkel_lab/galaxy-neurolincs)
-[![Docker Repository on DockerHub](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/fraenkelmit/galaxy-neurolincs/)
 
 # The NeuroLINCS Galaxy
 
