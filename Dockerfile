@@ -47,13 +47,18 @@ RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool 
 ADD ./tools.yml $GALAXY_ROOT/tools.yml
 RUN install-tools $GALAXY_ROOT/tools.yml
 
-# Add Workflows
+# Add Workflows, Data Libraries, and Data Managers
 RUN mkdir -p $GALAXY_HOME/workflows
-ADD ./workflows/* $GALAXY_HOME/workflows/
+COPY workflows/* $GALAXY_HOME/workflows/
+# COPY data-library.yml $GALAXY_HOME/data-library.yml
+COPY data-managers.yml $GALAXY_HOME/data-managers.yml
 
 RUN startup_lite && \
     galaxy-wait && \
-    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    # setup-data-libraries -i $GALAXY_ROOT/data-library.yml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    run-data-managers --config $GALAXY_HOME/data-manager.yml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+
 
 # Configure Galaxy Homepage
 ADD ./welcome.html $GALAXY_CONFIG_DIR/web/welcome.html
