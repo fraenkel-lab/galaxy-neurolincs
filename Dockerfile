@@ -51,7 +51,7 @@ RUN install-tools $GALAXY_ROOT/tools.yml
 RUN mkdir -p $GALAXY_HOME/workflows
 COPY workflows/* $GALAXY_HOME/workflows/
 # ADD ./data-library.yml $GALAXY_HOME/data-library.yml
-ADD ./data-managers.yml $GALAXY_HOME/data-managers.yml
+ADD ./data-manager.yml $GALAXY_HOME/data-manager.yml
 
 RUN startup_lite && \
     galaxy-wait && \
