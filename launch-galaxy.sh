@@ -19,7 +19,7 @@ docker run -d \
 	-e "NONUSE=slurmd,slurmctld" \
 	-e "USE_HTTPS_LETSENCRYPT=True" \
 	-e "GALAXY_ROOT=/export/galaxy-central" \
-    -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
+        -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
 	-e "galaxy_extras_config_condor=False" \
 	-e "galaxy_extras_config_condor_docker=False" \
 	quay.io/fraenkel_lab/galaxy-neurolincs
