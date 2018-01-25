@@ -51,13 +51,13 @@ RUN install-tools $GALAXY_ROOT/tools.yml
 RUN mkdir -p $GALAXY_HOME/workflows
 COPY workflows/* $GALAXY_HOME/workflows/
 # ADD ./data-library.yml $GALAXY_HOME/data-library.yml
-ADD ./data-manager.yml $GALAXY_HOME/data-manager.yml
+# ADD ./data-manager.yml $GALAXY_HOME/data-manager.yml
 
 RUN startup_lite && \
     galaxy-wait && \
-    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
+    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
+    # run-data-managers --config $GALAXY_HOME/data-manager.yml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
     # setup-data-libraries -i $GALAXY_ROOT/data-library.yml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD && \
-    run-data-managers --config $GALAXY_HOME/data-manager.yml -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 
 
 # Configure Galaxy Homepage
