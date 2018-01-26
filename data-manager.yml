@@ -13,10 +13,10 @@ data_managers:
       # In case of genome for example you can run this DM with multiple genomes, or you could give multiple URLs.
       items:
           - hg19
-          - hg38
-          - mm9
-          - mm10
-          - dm6
+          # - hg38
+          # - mm9
+          # - mm10
+          # - dm6
       # Name of the data-tables you want to reload after your DM are finished. This can be important for subsequent data managers
       data_table_reload:
           - all_fasta
