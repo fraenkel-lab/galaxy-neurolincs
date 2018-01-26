@@ -61,7 +61,8 @@ tools:
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
-  - "7a68005de299"
+  - "aecfe10118ed"
+  # - "7a68005de299"
   # version: "0.5.8.1"
   # id: "toolshed.g2.bx.psu.edu/repos/iuc/ngsutils_bam_filter/ngsutils_bam_filter/0.5.8.1"
   # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fngsutils_bam_filter%2Fngsutils_bam_filter%2F0.5.8.1",
