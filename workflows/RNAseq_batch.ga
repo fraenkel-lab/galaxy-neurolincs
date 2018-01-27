@@ -38,25 +38,19 @@
             "id": 1, 
             "input_connections": {}, 
             "inputs": [], 
-            "label": "GFF File", 
+            "label": "GTF/GFF file", 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 925.5, 
-                "top": 713
+                "left": 736.203125, 
+                "top": 712.5
             }, 
             "tool_id": null, 
             "tool_state": "{}", 
             "tool_version": null, 
             "type": "data_input", 
-            "uuid": "3a8fbe70-9ca7-4225-9ebb-daf6e2e66639", 
-            "workflow_outputs": [
-                {
-                    "label": null, 
-                    "output_name": "output", 
-                    "uuid": "93ae4c88-4213-43e8-8e22-46f644cb36ee"
-                }
-            ]
+            "uuid": "d1c11023-75eb-4970-bfad-666217062065", 
+            "workflow_outputs": []
         }, 
         "2": {
             "annotation": "", 
@@ -174,8 +168,8 @@
                 }
             ], 
             "position": {
-                "left": 412.5, 
-                "top": 364
+                "left": 411.5, 
+                "top": 366
             }, 
             "post_job_actions": {
                 "HideDatasetActionfastq_out": {
@@ -277,8 +271,8 @@
                 }
             ], 
             "position": {
-                "left": 699.5, 
-                "top": 403
+                "left": 697.5, 
+                "top": 406
             }, 
             "post_job_actions": {
                 "HideDatasetActionaccepted_hits": {
@@ -333,129 +327,102 @@
         }, 
         "5": {
             "annotation": "", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.1", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/1.6.0.2", 
             "errors": null, 
             "id": 5, 
             "input_connections": {
-                "input1": {
+                "alignment": {
                     "id": 4, 
                     "output_name": "accepted_hits"
-                }
-            }, 
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Sort", 
-                    "name": "input1"
-                }
-            ], 
-            "label": null, 
-            "name": "Sort", 
-            "outputs": [
-                {
-                    "name": "output1", 
-                    "type": "bam"
-                }
-            ], 
-            "position": {
-                "left": 925.5, 
-                "top": 601
-            }, 
-            "post_job_actions": {}, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.1", 
-            "tool_shed_repository": {
-                "changeset_revision": "cab3f8d35989", 
-                "name": "samtools_sort", 
-                "owner": "devteam", 
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            }, 
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"sort_mode\": \"\\\"\\\"\"}", 
-            "tool_version": "2.0.1", 
-            "type": "tool", 
-            "uuid": "2e472ce2-8572-41a9-afba-0ef7d6208470", 
-            "workflow_outputs": [
-                {
-                    "label": null, 
-                    "output_name": "output1", 
-                    "uuid": "a4557e92-dc8f-424d-9e3a-0dea44a06326"
-                }
-            ]
-        }, 
-        "6": {
-            "annotation": "", 
-            "content_id": "toolshed.g2.bx.psu.edu/repos/lparsons/htseq_count/htseq_count/0.6.1galaxy3", 
-            "errors": null, 
-            "id": 6, 
-            "input_connections": {
-                "gfffile": {
+                }, 
+                "anno|gtf_source|reference_gene_sets": {
                     "id": 1, 
                     "output_name": "output"
-                }, 
-                "samfile": {
-                    "id": 5, 
-                    "output_name": "output1"
                 }
             }, 
             "inputs": [
                 {
-                    "description": "runtime parameter for tool htseq-count", 
-                    "name": "samfile"
-                }, 
-                {
-                    "description": "runtime parameter for tool htseq-count", 
-                    "name": "gfffile"
+                    "description": "runtime parameter for tool featureCounts", 
+                    "name": "alignment"
                 }
             ], 
             "label": null, 
-            "name": "htseq-count", 
+            "name": "featureCounts", 
             "outputs": [
                 {
-                    "name": "counts", 
+                    "name": "output_medium", 
                     "type": "tabular"
                 }, 
                 {
-                    "name": "othercounts", 
+                    "name": "output_short", 
                     "type": "tabular"
                 }, 
                 {
-                    "name": "samoutfile", 
-                    "type": "bam"
+                    "name": "output_full", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_summary", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_feature_lengths", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_jcounts", 
+                    "type": "tabular"
                 }
             ], 
             "position": {
-                "left": 1111.5, 
-                "top": 624
+                "left": 926, 
+                "top": 603.5
             }, 
             "post_job_actions": {
-                "HideDatasetActionothercounts": {
+                "HideDatasetActionoutput_feature_lengths": {
                     "action_arguments": {}, 
                     "action_type": "HideDatasetAction", 
-                    "output_name": "othercounts"
+                    "output_name": "output_feature_lengths"
                 }, 
-                "HideDatasetActionsamoutfile": {
+                "HideDatasetActionoutput_full": {
                     "action_arguments": {}, 
                     "action_type": "HideDatasetAction", 
-                    "output_name": "samoutfile"
+                    "output_name": "output_full"
+                }, 
+                "HideDatasetActionoutput_jcounts": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_jcounts"
+                }, 
+                "HideDatasetActionoutput_medium": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_medium"
+                }, 
+                "HideDatasetActionoutput_short": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_short"
+                }, 
+                "HideDatasetActionoutput_summary": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_summary"
                 }
             }, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/lparsons/htseq_count/htseq_count/0.6.1galaxy3", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/1.6.0.2", 
             "tool_shed_repository": {
-                "changeset_revision": "620d5603d1a8", 
-                "name": "htseq_count", 
-                "owner": "lparsons", 
+                "changeset_revision": "46cccc52be5f", 
+                "name": "featurecounts", 
+                "owner": "iuc", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             }, 
-            "tool_state": "{\"featuretype\": \"\\\"exon\\\"\", \"samout_conditional\": \"{\\\"samout\\\": \\\"No\\\", \\\"__current_case__\\\": 1}\", \"__page__\": null, \"idattr\": \"\\\"gene_id\\\"\", \"force_sort\": \"\\\"true\\\"\", \"stranded\": \"\\\"yes\\\"\", \"samfile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"gfffile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"minaqual\": \"\\\"10\\\"\", \"mode\": \"\\\"union\\\"\", \"__rerun_remap_job_id__\": null}", 
-            "tool_version": "0.6.1galaxy3", 
+            "tool_state": "{\"pe_parameters\": \"{\\\"only_both_ends\\\": \\\"false\\\", \\\"exclude_chimerics\\\": \\\"true\\\", \\\"fragment_counting_enabled\\\": {\\\"fragment_counting\\\": \\\"\\\", \\\"__current_case__\\\": 1}}\", \"format\": \"\\\"tabdel_short_noheader\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"include_feature_length_file\": \"\\\"false\\\"\", \"anno\": \"{\\\"anno_select\\\": \\\"gtf\\\", \\\"gtf_source\\\": {\\\"ref_source\\\": \\\"history\\\", \\\"reference_gene_sets\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 1}\", \"extended_parameters\": \"{\\\"gff_feature_attribute\\\": \\\"gene_id\\\", \\\"exon_exon_junction_read_counting_enabled\\\": {\\\"__current_case__\\\": 1, \\\"count_exon_exon_junction_reads\\\": \\\"false\\\"}, \\\"read_extension_3p\\\": \\\"0\\\", \\\"frac_overlap_feature\\\": \\\"0\\\", \\\"strand_specificity\\\": \\\"0\\\", \\\"read_extension_5p\\\": \\\"0\\\", \\\"mapping_quality\\\": \\\"12\\\", \\\"frac_overlap\\\": \\\"0\\\", \\\"primary\\\": \\\"false\\\", \\\"count_split_alignments_only\\\": \\\"false\\\", \\\"by_read_group\\\": \\\"false\\\", \\\"min_overlap\\\": \\\"1\\\", \\\"contribute_to_multiple_features\\\": \\\"false\\\", \\\"ignore_dup\\\": \\\"false\\\", \\\"summarization_level\\\": \\\"false\\\", \\\"largest_overlap\\\": \\\"false\\\", \\\"read_reduction\\\": \\\"\\\", \\\"multimapping_enabled\\\": {\\\"multimapping_counts\\\": \\\"\\\", \\\"__current_case__\\\": 1}, \\\"long_reads\\\": \\\"false\\\", \\\"gff_feature_type\\\": \\\"exon\\\"}\", \"alignment\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "1.6.0.2", 
             "type": "tool", 
-            "uuid": "dff8c8eb-ac25-46bd-a0b0-ae9c8ac4bd05", 
-            "workflow_outputs": [
-                {
-                    "label": null, 
-                    "output_name": "counts", 
-                    "uuid": "61f69e49-4ac6-44b3-9619-e16fb67e0865"
-                }
-            ]
+            "uuid": "ed985922-82bc-44c3-9783-b2c1ef86da6f", 
+            "workflow_outputs": []
         }
     }, 
-    "uuid": "e66319f5-6d5c-4bf0-9e9f-8db62e1832e9"
+    "uuid": "4b8ae016-dae5-4ea2-a289-8e8ea63ba619"
 }

@@ -291,3 +291,12 @@ tools:
   install_tool_dependencies: False
   revisions:
   - "a8eabd2838f6"
+
+- name: featureCounts
+  owner: iuc
+  tool_panel_section_label: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "46cccc52be5f"
