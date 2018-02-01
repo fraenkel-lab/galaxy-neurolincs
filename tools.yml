@@ -184,14 +184,14 @@ tools:
   # id: "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39"
   # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fdeseq2%2Fdeseq2%2F2.11.39",
 
-- name: diffbind
-  owner: bgruening
-  tool_panel_section_label: "ATACseq"
-  panel_section_id: "atacseq"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-  revisions:
-  - "6031247f61d4"
+# - name: diffbind
+#   owner: bgruening
+#   tool_panel_section_label: "ATACseq"
+#   panel_section_id: "atacseq"
+#   install_resolver_dependencies: True
+#   install_tool_dependencies: False
+#   revisions:
+#   - "6031247f61d4"
   # "version": "2.2.2"
   # "id": "toolshed.g2.bx.psu.edu/repos/bgruening/diffbind/diffbind/2.2.2"
   # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fbgruening%2Fdiffbind%2Fdiffbind%2F2.2.2"
