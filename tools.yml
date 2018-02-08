@@ -192,9 +192,9 @@ tools:
   install_tool_dependencies: False
   revisions:
   - "6031247f61d4"
-  "version": "2.2.2"
-  "id": "toolshed.g2.bx.psu.edu/repos/bgruening/diffbind/diffbind/2.2.2"
-  "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fbgruening%2Fdiffbind%2Fdiffbind%2F2.2.2"
+  # "version": "2.2.2"
+  # "id": "toolshed.g2.bx.psu.edu/repos/bgruening/diffbind/diffbind/2.2.2"
+  # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fbgruening%2Fdiffbind%2Fdiffbind%2F2.2.2"
 
 - name: idr
   owner: iuc
