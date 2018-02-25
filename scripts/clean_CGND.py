@@ -21,6 +21,8 @@ def removeEmptyFolders(path, removeRoot=True):
 		os.rmdir(path)
 
 
+# Usage: python ~/clean_CGND.py /pool/data/globus/CGND_XXXXX
+
 if __name__ == '__main__':
 
 	base_filepath = sys.argv[1]
