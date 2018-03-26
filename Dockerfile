@@ -45,7 +45,7 @@ RUN add-tool-shed --url 'https://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool 
 
 # Install tools
 ADD ./tools.yml $GALAXY_ROOT/tools.yml
-RUN install-tools $GALAXY_ROOT/tools.yml
+# RUN install-tools $GALAXY_ROOT/tools.yml
 
 # Add Workflows, Data Libraries, and Data Managers
 RUN mkdir -p $GALAXY_HOME/workflows
