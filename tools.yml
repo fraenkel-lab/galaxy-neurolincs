@@ -143,8 +143,8 @@ tools:
 
 - name: macs2
   owner: iuc
-  tool_panel_section_label: "ATACseq"
-  tool_panel_section_id: "atacseq"
+  tool_panel_section_label: "Epigenomics"
+  tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -153,8 +153,8 @@ tools:
 
 - name: deseq2
   owner: iuc
-  tool_panel_section_label: "NGS"
-  tool_panel_section_id: "ngs"
+  tool_panel_section_label: "Transcriptomics"
+  tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -163,8 +163,8 @@ tools:
 
 # - name: diffbind
 #   owner: bgruening
-#   tool_panel_section_label: "ATACseq"
-tool_panel_section_id: "atacseq"
+#   tool_panel_section_label: "Epigenomics"
+#   tool_panel_section_id: "epigenomics"
 #   install_resolver_dependencies: True
 #   install_tool_dependencies: False
 #   revisions:
@@ -173,8 +173,8 @@ tool_panel_section_id: "atacseq"
 
 - name: idr
   owner: iuc
-  tool_panel_section_label: "ATACseq"
-  tool_panel_section_id: "atacseq"
+  tool_panel_section_label: "Epigenomics"
+  tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -183,8 +183,8 @@ tool_panel_section_id: "atacseq"
 
 - name: manorm
   owner: haydensun
-  tool_panel_section_label: "ATACseq"
-  tool_panel_section_id: "atacseq"
+  tool_panel_section_label: "Epigenomics"
+  tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -203,8 +203,8 @@ tool_panel_section_id: "atacseq"
 
 - name: rseqc
   owner: nilesh
-  tool_panel_section_label: "RNAseq"
-  tool_panel_section_id: "rnaseq"
+  tool_panel_section_label: "Transcriptomics"
+  tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -213,8 +213,8 @@ tool_panel_section_id: "atacseq"
 
 - name: featurecounts
   owner: iuc
-  tool_panel_section_label: "RNAseq"
-  tool_panel_section_id: "rnaseq"
+  tool_panel_section_label: "Transcriptomics"
+  tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -223,8 +223,8 @@ tool_panel_section_id: "atacseq"
 
 - name: stringtie
   owner: iuc
-  tool_panel_section_label: "RNAseq"
-  tool_panel_section_id: "rnaseq"
+  tool_panel_section_label: "Transcriptomics"
+  tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -233,8 +233,8 @@ tool_panel_section_id: "atacseq"
 
 - name: hisat2
   owner: iuc
-  tool_panel_section_label: "RNAseq"
-  tool_panel_section_id: "rnaseq"
+  tool_panel_section_label: "Aligners"
+  tool_panel_section_id: "aligners"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -243,8 +243,8 @@ tool_panel_section_id: "atacseq"
 
 - name: suite_deeptools
   owner: bgruening
-  tool_panel_section_label: "DeepTools"
-  tool_panel_section_id: "deeptools"
+  tool_panel_section_label: "NGS"
+  tool_panel_section_id: "ngs"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -253,8 +253,8 @@ tool_panel_section_id: "atacseq"
 
 - name: suite_hicexplorer
   owner: bgruening
-  tool_panel_section_label: "HiCexplorer"
-  tool_panel_section_id: "hicexplorer"
+  tool_panel_section_label: "Epigenomics"
+  tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
