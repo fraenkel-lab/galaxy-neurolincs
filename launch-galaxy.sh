@@ -4,25 +4,25 @@ sudo cp /etc/slurm-llnl/slurm.conf /pool/data/galaxy/
 sudo cp /etc/munge/munge.key /pool/data/galaxy/
 
 docker run -d \
-	--name=galaxy \
-	--restart=on-failure \
-	--privileged=true \
-	-v /pool/data/galaxy/:/export/ \
-	-v /pool/data/globus/:/globus/ \
-	-v /pool/data/galaxy_venv/:/galaxy_venv/ \
-	-p 80:80 \
-	-p 8021:21 \
-	-p 8022:22 \
-	-p 443:443 \
-	-p 8800:8800 \
-	-p 9002:9002 \
-	-e "NONUSE=slurmd,slurmctld" \
-	-e "USE_HTTPS_LETSENCRYPT=True" \
-	-e "GALAXY_ROOT=/export/galaxy-central" \
-        -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
-	-e "galaxy_extras_config_condor=False" \
-	-e "galaxy_extras_config_condor_docker=False" \
-	quay.io/fraenkel_lab/galaxy-neurolincs
+    --name=galaxy \
+    --restart=on-failure \
+    --privileged=true \
+    -v /pool/data/galaxy/:/export/ \
+    -v /pool/data/globus/:/globus/ \
+    -v /pool/data/galaxy_venv/:/galaxy_venv/ \
+    -p 80:80 \
+    -p 8021:21 \
+    -p 8022:22 \
+    -p 443:443 \
+    -p 8800:8800 \
+    -p 9002:9002 \
+    -e "NONUSE=slurmd,slurmctld" \
+    -e "USE_HTTPS_LETSENCRYPT=True" \
+    -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
+    -e "GALAXY_ROOT=/export/galaxy-central" \
+    -e "galaxy_extras_config_condor=False" \
+    -e "galaxy_extras_config_condor_docker=False" \
+    quay.io/fraenkel_lab/galaxy-neurolincs:latest
 
 
 # for testing (and to keep data from persisting) this command is sufficient:
