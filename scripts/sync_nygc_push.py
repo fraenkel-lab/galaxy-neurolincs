@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
 	print "Files which we seem to have more recent copies of: "
 
-	for file in all_new_files:
+	for file in all_updated_files:
 
 		if os.path.getmtime(pushed_files_base_filepath+file) > os.path.getmtime(local_files_base_filepath+file):
 
