@@ -19,14 +19,13 @@ docker run -d \
     -e "NONUSE=slurmd,slurmctld" \
     -e "USE_HTTPS_LETSENCRYPT=True" \
     -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
-    -e "GALAXY_ROOT=/export/galaxy-central" \
     -e "galaxy_extras_config_condor=False" \
     -e "galaxy_extras_config_condor_docker=False" \
     quay.io/fraenkel_lab/galaxy-neurolincs:latest
 
 
 # for testing (and to keep data from persisting) this command is sufficient:
-# docker run -d -p 80:80 -p 9002:9002 quay.io/fraenkel_lab/galaxy-neurolincs
+# docker run -d -p 80:80 -p 9002:9002 quay.io/fraenkel_lab/galaxy-neurolincs:latest
 
 # for testing with globus integration:
 # docker run -d -p 80:80  -p 21:21 -p 8800:8800 -p 9002:9002 -p 2811:2811 -p 2223:2223 -p 7512:7512 -p 50000-51000:50000-51000 quay.io/fraenkel_lab/galaxy-neurolincs
