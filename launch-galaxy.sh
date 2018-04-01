@@ -7,7 +7,7 @@ docker run -d \
     --name=galaxy \
     --restart=on-failure \
     --privileged=true \
-    -v /pool/data/galaxy/:/export/ \
+    -v /pool/data/export/:/export/ \
     -v /pool/data/globus/:/globus/ \
     -v /pool/data/galaxy_venv/:/galaxy_venv/ \
     -p 80:80 \
