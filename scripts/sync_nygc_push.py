@@ -2,6 +2,24 @@ import os, sys, pickle
 
 def flatten(list_of_lists): return [item for sublist in list_of_lists for item in sublist]
 
+def removeEmptyFolders(path, removeRoot=True):
+
+	if not os.path.isdir(path):
+		return
+
+	# remove empty subfolders
+	files = os.listdir(path)
+	if len(files):
+		for f in files:
+			fullpath = os.path.join(path, f)
+			if os.path.isdir(fullpath):
+				removeEmptyFolders(fullpath)
+
+	# if folder empty, delete it
+	files = os.listdir(path)
+	if len(files) == 0 and removeRoot:
+		os.rmdir(path)
+
 
 if __name__ == '__main__':
 
@@ -34,4 +52,4 @@ if __name__ == '__main__':
 
 			print local_files_base_filepath+file
 
-
+	removeEmptyFolders(pushed_files_base_filepath)
