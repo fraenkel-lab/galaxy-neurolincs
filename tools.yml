@@ -42,6 +42,15 @@ tools:
   owner: devteam
   # install_resolver_dependencies: True
 
+- name: text_processing
+  owner: bgruening
+  panel_section_id: "textutil"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "e39fceb6ab85"
+  # "version": "1.1.1"
+
 - name: bedtools
   owner: iuc
   tool_panel_section_label: "BEDtools"
@@ -60,8 +69,6 @@ tools:
 #   revisions:
 #   - "fc288950c3b7"
   # version: "2.7.1.0"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicatesWithMateCigar/2.7.1.0"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fpicard%2Fpicard_MarkDuplicatesWithMateCigar%2F2.7.1.0",
 
 - name: samtools_sort
   owner: devteam
@@ -72,8 +79,6 @@ tools:
   revisions:
   - "cab3f8d35989"
   # version: "2.0.1"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.1"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fsamtools_sort%2Fsamtools_sort%2F2.0.1",
 
 - name: ngsutils_bam_filter
   owner: iuc
@@ -85,8 +90,6 @@ tools:
   - "aecfe10118ed"
   # - "7a68005de299"
   # version: "0.5.8.1"
-  # id: "toolshed.g2.bx.psu.edu/repos/iuc/ngsutils_bam_filter/ngsutils_bam_filter/0.5.8.1"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fngsutils_bam_filter%2Fngsutils_bam_filter%2F0.5.8.1",
 
 - name: sam_merge
   owner: devteam
@@ -97,20 +100,6 @@ tools:
   revisions:
   - "1977f1637890"
   # version: "1.2.0"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/sam_merge/sam_merge2/1.2.0"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fsam_merge%2Fsam_merge2%2F1.2.0",
-
-- name: bwa
-  owner: devteam
-  tool_panel_section_label: "Aligners"
-  panel_section_id: "aligners"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-  revisions:
-  - "4d82cf59895e"
-  # version: "0.7.16.2"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.7.16.2"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fbwa%2Fbwa%2F0.7.16.2",
 
 - name: fastq_groomer
   owner: devteam
@@ -121,8 +110,6 @@ tools:
   revisions:
   - "e4d28c94242d"
   # version: "1.0.4"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/fastq_groomer/fastq_groomer/1.0.4"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ffastq_groomer%2Ffastq_groomer%2F1.0.4",
 
 - name: fastqc
   owner: devteam
@@ -133,8 +120,6 @@ tools:
   revisions:
   - "9337dd1fbc66"
   # version: "0.69"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.69"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ffastqc%2Ffastqc%2F0.69",
 
 - name: trimmomatic
   owner: pjbriggs
@@ -145,8 +130,6 @@ tools:
   revisions:
   - "53af7b5b1b56"
   # version: "0.36.4"
-  # id: "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.4"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fpjbriggs%2Ftrimmomatic%2Ftrimmomatic%2F0.36.4",
 
 - name: bowtie2
   owner: devteam
@@ -157,8 +140,6 @@ tools:
   revisions:
   - "8ccbdbe9a695"
   # version: "2.3.2.2"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.2.2"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fbowtie2%2Fbowtie2%2F2.3.2.2",
 
 - name: macs2
   owner: iuc
@@ -169,8 +150,6 @@ tools:
   revisions:
   - "e8a060164e11"
   # version: "2.1.1.20160309.0"
-  # id: "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_bdgcmp/2.1.1.20160309.0"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fmacs2%2Fmacs2_bdgcmp%2F2.1.1.20160309.0",
 
 - name: deseq2
   owner: iuc
@@ -181,8 +160,6 @@ tools:
   revisions:
   - "6f91b8ce6e07"
   # version: "2.11.39"
-  # id: "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.39"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fdeseq2%2Fdeseq2%2F2.11.39",
 
 # - name: diffbind
 #   owner: bgruening
@@ -193,8 +170,6 @@ tools:
 #   revisions:
 #   - "6031247f61d4"
 #   # "version": "2.2.2"
-#   # "id": "toolshed.g2.bx.psu.edu/repos/bgruening/diffbind/diffbind/2.2.2"
-#   # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fbgruening%2Fdiffbind%2Fdiffbind%2F2.2.2"
 
 - name: idr
   owner: iuc
@@ -205,20 +180,16 @@ tools:
   revisions:
   - "d3ebbf39b1c5"
   # "version": "2.0.3",
-  # "id": "toolshed.g2.bx.psu.edu/repos/iuc/idr/idr/2.0.3",
-  # "link": "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fiuc%2Fidr%2Fidr%2F2.0.3",
 
-# - name: bed_to_bigwig
-#   owner: xuebing
-#   tool_panel_section_label: "BigWig"
-#   panel_section_id: "bigwig"
-#   install_resolver_dependencies: True
-#   install_tool_dependencies: False
-#   revisions:
-#   - "4e9e1625dae3"
-  # version: "1.0.0"
-  # id: "toolshed.g2.bx.psu.edu/repos/xuebing/bed_to_bigwig/bed_to_bigwig/1.0.0"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fxuebing%2Fbed_to_bigwig%2Fbed_to_bigwig%2F1.0.0",
+- name: manorm
+  owner: haydensun
+  panel_section_name: "ATACseq"
+  panel_section_id: "atacseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "52225f471c57"
+  # "version": "1.0"
 
 - name: tophat2
   owner: devteam
@@ -229,8 +200,6 @@ tools:
   revisions:
   - "16c4255042be"
   # version: "2.1.1"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/tophat2/tophat2/2.1.1"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Ftophat2%2Ftophat2%2F2.1.1",
 
 - name: rseqc
   owner: nilesh
@@ -241,20 +210,6 @@ tools:
   revisions:
   - "09846d5169fa"
   # version: "2.6.4"
-  # id: "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_deletion_profile/2.6.4"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fnilesh%2Frseqc%2Frseqc_deletion_profile%2F2.6.4",
-
-- name: cufflinks
-  owner: devteam
-  tool_panel_section_label: "RNAseq"
-  panel_section_id: "rnaseq"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-  revisions:
-  - "e04dbae2abe0"
-  # version: "2.2.1.2"
-  # id: "toolshed.g2.bx.psu.edu/repos/devteam/cufflinks/cufflinks/2.2.1.2"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fdevteam%2Fcufflinks%2Fcufflinks%2F2.2.1.2",
 
 - name: featurecounts
   owner: iuc
@@ -265,16 +220,43 @@ tools:
   revisions:
   - "46cccc52be5f"
 
-- name: ms_data_converter
-  owner: galaxyp
-  tool_panel_section_label: "Mass-Spec"
-  panel_section_id: "ms"
+
+- name: stringtie
+  owner: iuc
+  panel_section_name: "RNAseq"
+  panel_section_id: "rnaseq"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
-  - "a36e9f847308"
-  # version: "1.3.0"
-  # id: "toolshed.g2.bx.psu.edu/repos/galaxyp/ms_data_converter/ms_data_converter/1.3.0"
-  # link: "/tool_runner?tool_id=toolshed.g2.bx.psu.edu%2Frepos%2Fgalaxyp%2Fms_data_converter%2Fms_data_converter%2F1.3.0",
+  - "76d290331481"
+  # "version": "1.3.3"
 
+- name: hisat2
+  owner: iuc
+  panel_section_name: "RNAseq"
+  panel_section_id: "rnaseq"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "40e1083a4430"
+  # "version": "2.1.0"
 
+- name: suite_deeptools
+  owner: bgruening
+  panel_section_name: "DeepTools"
+  panel_section_id: "deeptools"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "2d466b530754"
+  # "version": "2.5.1.1.0"
+
+- name: suite_hicexplorer
+  owner: bgruening
+  panel_section_name: "HiCexplorer"
+  panel_section_id: "hicexplorer"
+  install_resolver_dependencies: True
+  install_tool_dependencies: False
+  revisions:
+  - "36ef3cb8ae2e"
+  # "version": "2.0.0"

@@ -1,6 +1,6 @@
 # Galaxy - NeuroLINCS Edition
 #
-# VERSION       0.4
+# VERSION       0.5
 
 FROM quay.io/bgruening/galaxy:18.01
 MAINTAINER Alex LeNail "alex@lenail.org"
@@ -35,7 +35,7 @@ ENV GALAXY_CONFIG_BRAND="AnswerALS" \
     GALAXY_CONFIG_CONDA_AUTO_INSTALL="True" \
     GALAXY_CONFIG_CONDA_AUTO_INIT="True" \
 
-    EXPORT_DIR_PREFIX="/pool/data/globus/"
+    EXPORT_DIR_PREFIX="/pool/data/globus/PUSHED_FROM_GALAXY"
 
     # GALAXY_HANDLER_NUMPROCS=2 \  # Set the number of Galaxy handlers -> we may want to change this later.
 
