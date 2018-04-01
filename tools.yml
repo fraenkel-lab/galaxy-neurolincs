@@ -8,7 +8,7 @@
 #  * owner: owner of the Tool Shed repository from where the tools is being
 #           installed
 # Further, you need to provide **one** of the following two keys:
- * tool_panel_section_id: ID of the tool panel section where you want the
+#  * tool_panel_section_id: ID of the tool panel section where you want the
 #                           tool to be installed. The section ID can be found
 #                           in Galaxy's `shed_tool_conf.xml` config file. Note
 #                           that the specified section must exist in this file.
