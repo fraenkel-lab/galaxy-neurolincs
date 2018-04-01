@@ -241,22 +241,22 @@ tools:
   - "40e1083a4430"
   # "version": "2.1.0"
 
-- name: suite_deeptools
-  owner: bgruening
-  tool_panel_section_label: "NGS"
-  tool_panel_section_id: "ngs"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-  revisions:
-  - "2d466b530754"
-  # "version": "2.5.1.1.0"
+# - name: suite_deeptools
+#   owner: bgruening
+#   tool_panel_section_label: "NGS"
+#   tool_panel_section_id: "ngs"
+#   install_resolver_dependencies: True
+#   install_tool_dependencies: False
+#   revisions:
+#   - "2d466b530754"
+#   # "version": "2.5.1.1.0"
 
-- name: suite_hicexplorer
-  owner: bgruening
-  tool_panel_section_label: "Epigenomics"
-  tool_panel_section_id: "epigenomics"
-  install_resolver_dependencies: True
-  install_tool_dependencies: False
-  revisions:
-  - "36ef3cb8ae2e"
-  # "version": "2.0.0"
+# - name: suite_hicexplorer
+#   owner: bgruening
+#   tool_panel_section_label: "Epigenomics"
+#   tool_panel_section_id: "epigenomics"
+#   install_resolver_dependencies: True
+#   install_tool_dependencies: False
+#   revisions:
+#   - "36ef3cb8ae2e"
+#   # "version": "2.0.0"
