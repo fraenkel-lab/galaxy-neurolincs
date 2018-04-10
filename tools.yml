@@ -54,7 +54,7 @@ tools:
 - name: bedtools
   owner: iuc
   tool_panel_section_label: "BEDtools"
-  tool_panel_section_id: "bedtools"
+  # tool_panel_section_id: "bedtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -73,7 +73,7 @@ tools:
 - name: samtools_sort
   owner: devteam
   tool_panel_section_label: "SAMTools"
-  tool_panel_section_id: "samtools"
+  # tool_panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -83,7 +83,7 @@ tools:
 - name: ngsutils_bam_filter
   owner: iuc
   tool_panel_section_label: "SAMTools"
-  tool_panel_section_id: "samtools"
+  # tool_panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -94,7 +94,7 @@ tools:
 - name: sam_merge
   owner: devteam
   tool_panel_section_label: "SAMTools"
-  tool_panel_section_id: "samtools"
+  # tool_panel_section_id: "samtools"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -104,7 +104,7 @@ tools:
 - name: fastq_groomer
   owner: devteam
   tool_panel_section_label: "NGS"
-  tool_panel_section_id: "ngs"
+  # tool_panel_section_id: "ngs"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -114,7 +114,7 @@ tools:
 - name: fastqc
   owner: devteam
   tool_panel_section_label: "NGS"
-  tool_panel_section_id: "ngs"
+  # tool_panel_section_id: "ngs"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -124,7 +124,7 @@ tools:
 - name: trimmomatic
   owner: pjbriggs
   tool_panel_section_label: "NGS"
-  tool_panel_section_id: "ngs"
+  # tool_panel_section_id: "ngs"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -134,7 +134,7 @@ tools:
 - name: bowtie2
   owner: devteam
   tool_panel_section_label: "Aligners"
-  tool_panel_section_id: "aligners"
+  # tool_panel_section_id: "aligners"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -144,7 +144,7 @@ tools:
 - name: macs2
   owner: iuc
   tool_panel_section_label: "Epigenomics"
-  tool_panel_section_id: "epigenomics"
+  # tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -154,7 +154,7 @@ tools:
 - name: deseq2
   owner: iuc
   tool_panel_section_label: "Transcriptomics"
-  tool_panel_section_id: "transcriptomics"
+  # tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -174,7 +174,7 @@ tools:
 - name: idr
   owner: iuc
   tool_panel_section_label: "Epigenomics"
-  tool_panel_section_id: "epigenomics"
+  # tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -184,7 +184,7 @@ tools:
 - name: manorm
   owner: haydensun
   tool_panel_section_label: "Epigenomics"
-  tool_panel_section_id: "epigenomics"
+  # tool_panel_section_id: "epigenomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -194,7 +194,7 @@ tools:
 - name: tophat2
   owner: devteam
   tool_panel_section_label: "Aligners"
-  tool_panel_section_id: "aligners"
+  # tool_panel_section_id: "aligners"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -204,7 +204,7 @@ tools:
 - name: rseqc
   owner: nilesh
   tool_panel_section_label: "Transcriptomics"
-  tool_panel_section_id: "transcriptomics"
+  # tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -214,7 +214,7 @@ tools:
 - name: featurecounts
   owner: iuc
   tool_panel_section_label: "Transcriptomics"
-  tool_panel_section_id: "transcriptomics"
+  # tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -224,7 +224,7 @@ tools:
 - name: stringtie
   owner: iuc
   tool_panel_section_label: "Transcriptomics"
-  tool_panel_section_id: "transcriptomics"
+  # tool_panel_section_id: "transcriptomics"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
@@ -234,7 +234,7 @@ tools:
 - name: hisat2
   owner: iuc
   tool_panel_section_label: "Aligners"
-  tool_panel_section_id: "aligners"
+  # tool_panel_section_id: "aligners"
   install_resolver_dependencies: True
   install_tool_dependencies: False
   revisions:
