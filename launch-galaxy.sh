@@ -6,7 +6,6 @@ sudo cp /etc/munge/munge.key /pool/data/export/
 docker run -d \
     --name=galaxy \
     --restart=on-failure \
-    --privileged=true \
     -v /pool/data/export/:/export/ \
     -v /pool/data/globus/:/globus/ \
     -v /pool/data/galaxy_venv/:/galaxy_venv/ \
@@ -19,7 +18,6 @@ docker run -d \
     -e "NONUSE=slurmd,slurmctld" \
     -e "USE_HTTPS_LETSENCRYPT=True" \
     -e "GALAXY_CONFIG_GALAXY_INFRASTRUCTURE_URL=answer.csbi.mit.edu" \
-    -e "GALAXY_ROOT=/export/galaxy-central" \
     -e "galaxy_extras_config_condor=False" \
     -e "galaxy_extras_config_condor_docker=False" \
     quay.io/fraenkel_lab/galaxy-neurolincs:latest
