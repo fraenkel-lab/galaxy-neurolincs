@@ -21,15 +21,13 @@ def removeEmptyFolders(path, removeRoot=True):
 		os.rmdir(path)
 
 
-# Usage: python ~/clean_CGND.py /pool/data/globus/CGND_XXXXX
+# Usage: python ~/galaxy-neurolincs/scripts/clean_CGND.py /pool/data/globus/PUSHED_FROM_NYGC/CGND_XXXXX
 
 if __name__ == '__main__':
 
 	base_filepath = sys.argv[1]
 
-	all_file_paths = [(path, files) for path, subdirs, files in os.walk(base_filepath) if len(files)]
-
-	all_file_paths = flatten([[os.path.join(path, file) for file in files] for path, files in all_file_paths])
+	all_file_paths = flatten([[os.path.join(path, file) for file in files] for path, subdirs, files in os.walk(base_filepath) if len(files)])
 
 	for filepath in all_file_paths:
 
@@ -40,16 +38,16 @@ if __name__ == '__main__':
 			filepath_parts = filepath.split('/')
 			sample_name = [part for part in filepath_parts if 'Sample_' in part]
 
-			if len(sample_name) == 0: print 'no sample name in: ' + filepath
+			if len(sample_name) == 0: print('no sample name in: ' + filepath)
 
 			elif len(sample_name) == 1:
 
 				if 'StructuralVariants' in filepath:
-					os.renames(os.path.join(base_filepath,filepath), os.path.join(base_filepath,sample_name[0],'StructuralVariants',filepath_parts[-1]))
+					os.renames(os.path.join(base_filepath, filepath), os.path.join(base_filepath, sample_name[0], 'StructuralVariants', filepath_parts[-1]))
 				else:
-					os.renames(os.path.join(base_filepath,filepath), os.path.join(base_filepath,sample_name[0],filepath_parts[-1]))
+					os.renames(os.path.join(base_filepath, filepath), os.path.join(base_filepath, sample_name[0], filepath_parts[-1]))
 
-			else: print 'possibly too many sample names in: ' + filepath
+			else: print('possibly too many sample names in: ' + filepath)
 
 
 	removeEmptyFolders(base_filepath)

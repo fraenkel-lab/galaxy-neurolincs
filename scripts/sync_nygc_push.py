@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
 	project = sys.argv[1]
 
-	pushed_files_base_filepath = "/pool/data/globus/NYGC_PUSH/"+project
+	pushed_files_base_filepath = "/pool/data/globus/PUSHED_FROM_NYGC/"+project
 	local_files_base_filepath = "/pool/data/globus/"+project
 
 	all_pushed_files = flatten([[os.path.join(path.split(pushed_files_base_filepath)[1], file) for file in files] for path, subdirs, files in os.walk(pushed_files_base_filepath) if len(files)])
