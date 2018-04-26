@@ -23,10 +23,11 @@ def removeEmptyFolders(path, removeRoot=True):
 
 if __name__ == '__main__':
 
-	project = sys.argv[1]
+	srcdir = sys.argv[1]
+	targetdir = sys.argv[2]
 
-	pushed_files_base_filepath = "/pool/data/globus/PUSHED_FROM_NYGC/"+project
-	local_files_base_filepath = "/pool/data/globus/"+project
+	pushed_files_base_filepath = "/pool/data/globus/PUSHED_FROM_NYGC/"+srcdir
+	local_files_base_filepath = "/pool/data/globus/"+targetdir
 
 	all_pushed_files = flatten([[os.path.join(path.split(pushed_files_base_filepath)[1], file) for file in files] for path, subdirs, files in os.walk(pushed_files_base_filepath) if len(files)])
 	all_local_files = flatten([[os.path.join(path.split(local_files_base_filepath)[1], file) for file in files] for path, subdirs, files in os.walk(local_files_base_filepath) if len(files)])
@@ -40,7 +41,7 @@ if __name__ == '__main__':
 	# Handle updated files
 	all_updated_files = list(set(all_pushed_files) & set(all_local_files))
 
-	print "Files which we seem to have more recent copies of: "
+	print("Files which we seem to have more recent copies of: ")
 
 	for file in all_updated_files:
 
@@ -50,6 +51,6 @@ if __name__ == '__main__':
 
 		else:
 
-			print local_files_base_filepath+file
+			print(local_files_base_filepath+file)
 
 	removeEmptyFolders(pushed_files_base_filepath)
