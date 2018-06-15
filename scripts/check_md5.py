@@ -3,7 +3,7 @@ import os, sys, pickle, hashlib
 
 if __name__ == '__main__':
 
-	base_filepath = "/pool/data/globus/PUSHED_FROM_NYGC/nas/"
+	base_filepath = "/pool/data/globus/PUSHED_FROM_NYGC/"
 
 	# for each directory,
 	for directory, subdirectories, files in os.walk(base_filepath):
@@ -30,8 +30,4 @@ if __name__ == '__main__':
 					print("our checksum: " + str(our_checksum))
 					print("their checksum: " + str(their_checksum))
 					print()
-
-
-				# compare
-				# print if they're not identical.
 
