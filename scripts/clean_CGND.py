@@ -42,6 +42,8 @@ if __name__ == '__main__':
 
 				if 'StructuralVariants' in filepath:
 					os.renames(os.path.join(base_filepath, filepath), os.path.join(base_filepath, 'StructuralVariants', filepath_parts[-1]))
+				elif 'ExpansionHunter' in filepath:
+					os.renames(os.path.join(base_filepath, filepath), os.path.join(base_filepath, 'ExpansionHunter', filepath_parts[-1]))
 				else: print('no sample name in: ' + filepath)
 
 			elif len(sample_name) == 1:
