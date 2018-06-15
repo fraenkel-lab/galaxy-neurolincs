@@ -38,7 +38,11 @@ if __name__ == '__main__':
 			filepath_parts = filepath.split('/')
 			sample_name = [part for part in filepath_parts if 'Sample_' in part]
 
-			if len(sample_name) == 0: print('no sample name in: ' + filepath)
+			if len(sample_name) == 0:
+
+				if 'StructuralVariants' in filepath:
+					os.renames(os.path.join(base_filepath, filepath), os.path.join(base_filepath, 'StructuralVariants', filepath_parts[-1]))
+				else: print('no sample name in: ' + filepath)
 
 			elif len(sample_name) == 1:
 
@@ -51,6 +55,7 @@ if __name__ == '__main__':
 
 
 	removeEmptyFolders(base_filepath)
+
 
 
 
