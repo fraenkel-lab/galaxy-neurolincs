@@ -41,11 +41,11 @@ if __name__ == '__main__':
 	# Handle updated files
 	all_updated_files = list(set(all_pushed_files) & set(all_local_files))
 
-	print("Files which we seem to have more recent copies of: ")
+	print("Files which we seem to have more recent copies of in "+local_files_base_filepath+":")
 
 	for file in all_updated_files:
 
-		if os.path.getmtime(pushed_files_base_filepath+file) > os.path.getmtime(local_files_base_filepath+file):
+		if os.path.getctime(pushed_files_base_filepath+file) > os.path.getmtime(local_files_base_filepath+file):
 
 			os.renames(pushed_files_base_filepath+file, local_files_base_filepath+file)
 
