@@ -109,7 +109,7 @@ def groups_valid():
     current_groups = {group.gr_name: group.gr_mem for group in grp.getgrall()}
     # Capture users' primary group affiliations, which may not be listed in the groups file.
     for user in pwd.getpwall():
-        current_groups[user.pw_name].append(grp.getgrgid(user.pw_gid).gr_name)
+        current_groups[grp.getgrgid(user.pw_gid).gr_name].append(user.pw_name)
 
     if len(set(desired_groups.keys()) - set(current_groups.keys())) > 0:
         print("Groups not existing on the machine which are listed in the script should be created:")
