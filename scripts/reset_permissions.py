@@ -10,19 +10,18 @@ desired_users = ['root', 'sync', 'localskm', 'stacia', 'pulkit', 'greg',
                 'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli' ]
 
 desired_groups = {
-    'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail']
-    'ucsf': ['leandro']
-    'uci' : ['jenny']
-    'cshs': ['vidya','andrea','lilith']
-    'nygc': ['pulkit']
-    'pm'  : ['barry', 'terri']
-    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','barry','terri']
+    'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail'],
+    'ucsf': ['leandro'],
+    'uci' : ['jenny'],
+    'cshs': ['vidya','andrea','lilith'],
+    'nygc': ['pulkit'],
+    'pm'  : ['barry', 'terri'],
+    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','barry','terri'],
 }
 
 mode = {
-    'owner can do anything, group can read and execute, others have no permissions': ''
-
-
+    'owner can do anything, group can read and execute, others have no permissions': 0o755,
+    'owner can do anything, group can do anything, others have no permissions': 0o775,
 }
 
 root_filepath = Path('/pool/data/globus/')
