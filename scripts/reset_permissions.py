@@ -108,7 +108,7 @@ def groups_valid():
 
     current_groups = {group.gr_name: group.gr_mem for group in grp.getgrall()}
     # Capture users' primary group affiliations, which may not be listed in the groups file.
-    for user in pwd.getpwall() if user.pw_shell not in system_users:
+    for user in [user for user in pwd.getpwall() if user.pw_shell not in system_users]:
         current_groups[grp.getgrgid(user.pw_gid).gr_name].append(user.pw_name)
 
     if len(set(desired_groups.keys()) - set(current_groups.keys())) > 0:
