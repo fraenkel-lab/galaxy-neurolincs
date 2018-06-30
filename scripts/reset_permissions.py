@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 
 
-desired_users = ['root', 'sync', 'localskm', 'stacia', 'pulkit', 'greg',
+desired_users = ['root', 'sync', 'localskm', 'pulkit', 'greg',
                 'galaxy', 'vidya', 'andrea', 'lilith', 'leandro', 'jenny',
                 'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli' ]
 
@@ -92,13 +92,13 @@ def users_valid():
     if len(set(current_users) - set(desired_users)) > 0:
         print("Users existing on the machine which are not accounted for in the script:")
         print(set(current_users) - set(desired_users))
-        print("please account for these users in the script, or deactivate them.")
+        print("please account for these users in the script, or deactivate them.", end="\n\n")
         return False
 
     # If some set of users are missing from the system -- we want them but they aren't there
     if len(set(desired_users) - set(current_users)) > 0:
         print("Users not existing on the machine which are listed in the script should be created with useradd:")
-        print(set(desired_users) - set(current_users))
+        print(set(desired_users) - set(current_users), end="\n\n")
         return False
 
     return True
@@ -113,7 +113,7 @@ def groups_valid():
 
     if len(set(desired_groups.keys()) - set(current_groups.keys())) > 0:
         print("Groups not existing on the machine which are listed in the script should be created:")
-        print(set(desired_groups.keys()) - set(current_groups.keys()))
+        print(set(desired_groups.keys()) - set(current_groups.keys()), end="\n\n")
         return False
 
     for group_name, desired_members in desired_groups.items():
@@ -123,13 +123,13 @@ def groups_valid():
         if len(set(desired_members) - set(current_members)) > 0:
             print(f"Group {group_name} is missing users specified in the script:")
             print(set(desired_members) - set(current_members))
-            print("Please add these users to the group, or remove them from the group list in the script.")
+            print("Please add these users to the group, or remove them from the group list in the script.", end="\n\n")
             return False
 
         if len(set(current_members) - set(desired_members)) > 0:
             print(f"Group {group_name} contains users not specified in the script:")
             print(set(current_members) - set(desired_members))
-            print("Please remove these users to the group, or add them from the group list in the script.")
+            print("Please remove these users to the group, or add them from the group list in the script.", end="\n\n")
             return False
 
     return True
