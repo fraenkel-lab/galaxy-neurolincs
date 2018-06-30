@@ -9,6 +9,8 @@ desired_users = ['root', 'sync', 'localskm', 'stacia', 'pulkit', 'greg',
                 'galaxy', 'vidya', 'andrea', 'lilith', 'leandro', 'jenny',
                 'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli' ]
 
+system_users = ['/usr/sbin/nologin','/bin/nologin','/bin/false']
+
 desired_groups = {
     'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail'],
     'ucsf': ['leandro'],
@@ -84,21 +86,19 @@ def reset_file_permissions():
 
 def users_valid():
 
-    system_users = ['/usr/sbin/nologin','/bin/nologin','/bin/false']
-
-    existing_users = [user.pw_name for user in pwd.getpwall() if user.pw_shell not in system_users]
+    current_users = [user.pw_name for user in pwd.getpwall() if user.pw_shell not in system_users]
 
     # If there are existing users on the system which shouldn't be on the system
-    if len(set(existing_users) - set(desired_users)) > 0:
+    if len(set(current_users) - set(desired_users)) > 0:
         print("Users existing on the machine which are not accounted for in the script:")
-        print(set(existing_users) - set(desired_users))
+        print(set(current_users) - set(desired_users))
         print("please account for these users in the script, or deactivate them.")
         return False
 
     # If some set of users are missing from the system -- we want them but they aren't there
-    if len(set(desired_users) - set(existing_users)) > 0:
+    if len(set(desired_users) - set(current_users)) > 0:
         print("Users not existing on the machine which are listed in the script should be created with useradd:")
-        print(set(desired_users) - set(existing_users))
+        print(set(desired_users) - set(current_users))
         return False
 
     return True
