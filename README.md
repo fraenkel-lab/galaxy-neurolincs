@@ -11,7 +11,7 @@ This docker image inherits from [bgruening/docker-galaxy-stable](https://github.
 - A custom homepage.
 - An additional set of ports we expose.
 
-You can find examples of this image running at [answer.csbi.mit.edu/](http://answer.csbi.mit.edu/) and [galaxy.neurolincs.org](http://galaxy.neurolincs.org).
+You can find examples of this image running at [answer.csbi.mit.edu/](http://answer.csbi.mit.edu/).
 
 
 ### Notes:

@@ -1,8 +1,0 @@
-
-
-libraries.get_libraries(library_id=None, name=None, deleted=False)
-
-libraries.show_library(library_id, contents=False)
-
-history.upload_dataset_from_library(history_id, lib_dataset_id)
-
