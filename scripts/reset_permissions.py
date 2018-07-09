@@ -22,8 +22,8 @@ desired_groups = {
 }
 
 mode = {
-    'owner can do anything, group can read and execute, others have no permissions': 0o755,
-    'owner can do anything, group can do anything, others have no permissions': 0o775,
+    'owner can do anything, group can read and execute, others have no permissions': 0o755,  # this is intentionally wrong -- need to figure out how to give privileges to galaxy
+    'owner can do anything, group can do anything, others have no permissions': 0o775,       # this is intentionally wrong -- need to figure out how to give privileges to galaxy
 }
 
 root_filepath = Path('/pool/data/globus/')
@@ -56,27 +56,27 @@ def reset_file_permissions():
 
     for directory, permissions in desired_ownerships.items():
 
-        new_owner = permissions.get('owner', default=None)
-        new_group = permissions.get('group', default=None)
-        new_mode  = permissions.get('mode', default=None)
+        new_owner = permissions.get('owner', None)
+        new_group = permissions.get('group', None)
+        new_mode  = permissions.get('mode', None)
 
-        for dir, subdirs, files in os.walk(root_filepath / directory):
+        for subdir, subsubdirs, files in os.walk(root_filepath / directory):
 
-            dir = Path(dir)
+            subdir = Path(subdir)
 
-            current_permissions = dir.stat()
+            current_permissions = subdir.stat()
             current_owner = pwd.getpwuid(current_permissions.st_uid).pw_name
             current_group = grp.getgrgid(current_permissions.st_gid).gr_name
             if current_owner != new_owner or current_group != new_group:
-                print(f'Directory: {dir}, current owner: {current_owner}, current group: {current_group}, new owner: {new_owner}, new group: {new_group}')
+                print(f"{subdir}  ::::  {current_owner} :: {current_group} --> {new_owner} :: {new_group}")
 
-            if new_owner: shutil.chown(dir, user=new_owner)
-            if new_group: shutil.chown(dir, group=new_group)
-            if new_mode:  dir.chmod(new_mode)
+            if new_owner: shutil.chown(subdir, user=new_owner)
+            if new_group: shutil.chown(subdir, group=new_group)
+            if new_mode:  subdir.chmod(new_mode)
 
             for f in files:
 
-                f = dir / f
+                f = subdir / f
 
                 if new_owner: shutil.chown(f, user=new_owner)
                 if new_group: shutil.chown(f, group=new_group)
