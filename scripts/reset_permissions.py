@@ -68,7 +68,7 @@ def reset_file_permissions():
             current_owner = pwd.getpwuid(current_permissions.st_uid).pw_name
             current_group = grp.getgrgid(current_permissions.st_gid).gr_name
             if current_owner != new_owner or current_group != new_group:
-                print(f"{subdir}  :::: [{current_owner} :: {current_group}] --> [{new_owner} :: {new_group}]")
+                print(f"{subdir} :::: [{current_owner} :: {current_group}] --> [{new_owner if new_owner else current_owner} :: {new_group if new_group else current_group}]")
 
             if new_owner: shutil.chown(subdir, user=new_owner)
             if new_group: shutil.chown(subdir, group=new_group)
