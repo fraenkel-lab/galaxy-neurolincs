@@ -68,6 +68,18 @@ def reset_file_permissions():
             current_owner = pwd.getpwuid(current_permissions.st_uid).pw_name
             current_group = grp.getgrgid(current_permissions.st_gid).gr_name
             if current_owner != new_owner or current_group != new_group:
+                a = f"{subdir}"
+                print(a)
+                a = f"{current_owner}"
+                print(a)
+                a = f"{current_group}"
+                print(a)
+                a = f"{new_owner}"
+                print(a)
+                a = f"{new_group}"
+                print(a)
+
+
                 s = f"{subdir}  :::: [{current_owner} :: {current_group}] --> [{new_owner} :: {new_group}]"
                 print(s)
 
