@@ -1,4 +1,4 @@
-# RNA-Seq Workflow
+# RNA-Seq Workflow Information
 
 ### Background
 
