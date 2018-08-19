@@ -23,6 +23,8 @@ def removeEmptyFolders(path, removeRoot=True):
 
 # Usage: python ~/galaxy-neurolincs/scripts/clean_CGND.py /pool/data/globus/PUSHED_FROM_NYGC/CGND_XXXXX
 
+# TODO this script now needs to take into account level1_fastq / level2_bam / level3_vcf
+
 if __name__ == '__main__':
 
 	base_filepath = sys.argv[1]

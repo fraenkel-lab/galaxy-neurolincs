@@ -20,6 +20,7 @@ def removeEmptyFolders(path, removeRoot=True):
 	if len(files) == 0 and removeRoot:
 		os.rmdir(path)
 
+# ~/galaxy-neurolincs/scripts/sync_nygc_push.py PUSHED_FROM_NYGC/CGND_***** other_genomics/level1_fastq/CGND_*****
 
 if __name__ == '__main__':
 
