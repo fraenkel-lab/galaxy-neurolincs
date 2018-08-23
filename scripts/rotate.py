@@ -60,17 +60,17 @@ if __name__ == '__main__':
 
 	        else:
 	        	if '.fastq.gz' in fileparts[7]:
-	        		os.renames(file, '/'.join([fileparts[:5]] + ['level1_fastq'] + fileparts[5:]))
+	        		os.renames(file, '/'.join(fileparts[:5] + ['level1_fastq'] + fileparts[5:]))
 	        	elif ('.bam' in fileparts[7] or '.bai' in fileparts[7] or '.cram' in fileparts[7] or '.crai' in fileparts[7]):
-	        		os.renames(file, '/'.join([fileparts[:5]] + ['level2_bam'] + fileparts[5:]))
+	        		os.renames(file, '/'.join(fileparts[:5] + ['level2_bam'] + fileparts[5:]))
 	        	else:
-	        		os.renames(file, '/'.join([fileparts[:5]] + ['level3_vcf'] + fileparts[5:]))
+	        		os.renames(file, '/'.join(fileparts[:5] + ['level3_vcf'] + fileparts[5:]))
 
 	    elif fileparts[6] == 'StructuralVariants':
-			os.renames(file, '/'.join([fileparts[:5]] + ['level3_vcf'] + fileparts[5:]))
+			os.renames(file, '/'.join(fileparts[:5] + ['level3_vcf'] + fileparts[5:]))
 
 	    elif fileparts[6] == 'ExpansionHunter':
-			os.renames(file, '/'.join([fileparts[:5]] + ['level3_vcf'] + fileparts[5:]))
+			os.renames(file, '/'.join(fileparts[:5] + ['level3_vcf'] + fileparts[5:]))
 
 
 	    else: print(file)
