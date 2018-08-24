@@ -18,5 +18,5 @@ if __name__ == '__main__':
 
     files = aals_epigenomics + aals_genomics + aals_proteomics + aals_transcriptomics + neurolincs_epigenomics + neurolincs_genomics + neurolincs_proteomics + neurolincs_transcriptomics #+ other_genomics
 
-    [print(file) for file in files]
+    [print(file) for file in files if "level" in file]
 
