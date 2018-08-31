@@ -18,12 +18,12 @@ desired_groups = {
     'cshs': ['vidya','andrea','lilith'],
     'nygc': ['pulkit'],
     'pm'  : ['barry', 'terri'],
-    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','barry','terri'],
+    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','barry','terri','galaxy'],
 }
 
 mode = {
-    'owner can do anything, group can read and execute, others have no permissions': 0o755,  # this is intentionally wrong -- need to figure out how to give privileges to galaxy
-    'owner can do anything, group can do anything, others have no permissions': 0o775,       # this is intentionally wrong -- need to figure out how to give privileges to galaxy
+    'owner can do anything, group can read and execute, others have no permissions': 0o755,
+    'owner can do anything, group can do anything, others have no permissions': 0o775,
 }
 
 root_filepath = Path('/pool/data/globus/')
