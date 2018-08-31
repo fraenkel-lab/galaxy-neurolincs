@@ -73,7 +73,7 @@ def reset_file_permissions():
             if current_owner != new_owner or current_group != new_group:
                 current = "["+current_owner+" :: "+current_group+"]"
                 new = "["+(new_owner if new_owner else current_owner)+" :: "+(new_group if new_group else current_group)+"]"
-                print(permissions_change.format(current, new, subdir.relative_to('/pool/data/globus')))
+                print(permissions_change.format(current, new, str(subdir.relative_to('/pool/data/globus'))))
 
             if new_owner: shutil.chown(subdir, user=new_owner)
             if new_group: shutil.chown(subdir, group=new_group)
