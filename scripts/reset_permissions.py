@@ -49,7 +49,7 @@ desired_ownerships = {
 }
 
 
-permissions_change = "{:<50} :::: {:<130}"
+permissions_change = "{:<50} :::: {:<}"
 
 
 def reset_file_permissions():
@@ -70,7 +70,7 @@ def reset_file_permissions():
             current_permissions = subdir.stat()
             current_owner = pwd.getpwuid(current_permissions.st_uid).pw_name
             current_group = grp.getgrgid(current_permissions.st_gid).gr_name
-            if current_owner != new_owner or current_group != new_group:
+            if (new_owner and current_owner != new_owner) or (new_group and current_group != new_group):
                 print(permissions_change.format("["+current_owner+" :: "+current_group+"] --> ["+(new_owner if new_owner else current_owner)+" :: "+(new_group if new_group else current_group)+"]", str(subdir.relative_to('/pool/data/globus'))))
 
             if new_owner: shutil.chown(subdir, user=new_owner)
