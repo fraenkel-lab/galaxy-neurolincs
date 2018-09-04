@@ -23,8 +23,8 @@ desired_groups = {
 }
 
 mode = {
-    'owner can do anything, group can read and execute, others have no permissions': 0o770, #0o750,
-    'owner can do anything, group can do anything, others have no permissions': 0o770,
+    'owner can do anything, group can read and execute, others have no permissions': 0o775, #0o750,
+    'owner can do anything, group can do anything, others have no permissions': 0o775,
 }
 
 root_filepath = Path('/pool/data/globus/')
