@@ -69,9 +69,9 @@ def reset_file_permissions():
 
             current_permissions = subdir.stat()
             try:    current_owner = pwd.getpwuid(current_permissions.st_uid).pw_name
-            except: current_owner = current_permissions.st_uid
+            except: current_owner = str(current_permissions.st_uid)
             try:    current_group = grp.getgrgid(current_permissions.st_gid).gr_name
-            except: current_group = current_permissions.st_gid
+            except: current_group = str(current_permissions.st_gid)
             if (new_owner and current_owner != new_owner) or (new_group and current_group != new_group):
                 print(permissions_change.format("["+current_owner+" :: "+current_group+"] --> ["+(new_owner if new_owner else current_owner)+" :: "+(new_group if new_group else current_group)+"]", str(subdir.relative_to('/pool/data/globus'))))
 
