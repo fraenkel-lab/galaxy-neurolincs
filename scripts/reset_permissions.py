@@ -7,12 +7,12 @@ from pathlib import Path
 
 desired_users = ['root', 'sync', 'localskm', 'pulkit', 'greg',
                 'galaxy', 'vidya', 'andrea', 'lilith', 'leandro', 'jenny',
-                'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli' ]
+                'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli', 'divyar' ]
 
 system_users = ['/usr/sbin/nologin','/bin/nologin','/bin/false']
 
 desired_groups = {
-    'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail'],
+    'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail', 'divyar'],
     'ucsf': ['leandro'],
     'uci' : ['jenny'],
     'cshs': ['vidya','andrea','lilith'],
@@ -45,7 +45,7 @@ desired_ownerships = {
     'PUSHED_FROM_UCI'            : {                'group':'uci',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_UCSF'           : {                'group':'ucsf',         'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'RNAseq_base'                : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
-    'tmp'                        : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
+    'genomics_base'              : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
 }
 
 
