@@ -1,5 +1,6 @@
 import os
 import collections
+import subprocess
 
 base_path = "/pool/data/globus"
 
@@ -33,11 +34,7 @@ def links(list_of_sources_and_dests):
 
         print("duplicated destination "+dup_dest+" concatenating files...")
 
-        with open(base_path+dup_dest, 'w') as outfile:
-            for source in sources:
-                print("    "+source)
-                with open(base_path+source) as infile:
-                    for line in infile:
-                        outfile.write(line)
-
+        command = f"cat {' '.join([base_path+source for source in sources])} > {base_path+dup_dest}"
+        print("... " + command)
+        # subprocess.run(command)
 
