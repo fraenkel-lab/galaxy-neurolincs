@@ -36,5 +36,5 @@ def links(list_of_sources_and_dests):
 
         command = f"cat {' '.join([base_path+source for source in sources])} > {base_path+dup_dest}"
         print("... " + command)
-        # subprocess.run(command)
+        subprocess.Popen(command.split(), shell=True)
 
