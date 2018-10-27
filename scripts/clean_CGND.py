@@ -48,10 +48,10 @@ if __name__ == '__main__':
 
             if len(sample_name) == 0:
 
-                if 'StructuralVariants' in filepath:
-                    os.renames(filepath, base_path / '3_vcf' / CGND_ID / 'StructuralVariants' / file_string)
-                elif 'ExpansionHunter' in filepath:
-                    os.renames(filepath, base_path / '3_vcf' / CGND_ID / 'ExpansionHunter' / file_string)
+                if any(['StructuralVariants' in part for part in filepath.parts]):
+                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'StructuralVariants' / file_string)
+                elif any(['ExpansionHunter' in part for part in filepath.parts])::
+                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'ExpansionHunter' / file_string)
                 else: print('no sample name in: ' + filepath)
 
             elif len(sample_name) == 1:
@@ -80,9 +80,9 @@ if __name__ == '__main__':
                 assert data_level != 0
 
                 if 'StructuralVariants' in filepath:
-                    os.renames(filepath, base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants' / file_string)
+                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants' / file_string)
                 else:
-                    os.renames(filepath, base_path / data_level / CGND_ID / sample_name[0] / file_string)
+                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / file_string)
 
             else: print('possibly too many sample names in: ' + filepath)
 
