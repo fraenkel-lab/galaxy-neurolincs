@@ -37,15 +37,14 @@ if __name__ == '__main__':
         if filepath.suffix == '.md5': os.remove(filepath)
 
         else:
-            filepath_parts = filepath.split('/')
 
-            CGND_ID = [part for part in filepath_parts if 'CGND_' in part and len(part) == 10]
+            CGND_ID = [part for part in filepath.parts if 'CGND_' in part and len(part) == 10]
             assert len(CGND_ID) == 1
 
-            sample_name = [part for part in filepath_parts if 'Sample_' in part]
+            sample_name = [part for part in filepath.parts if 'Sample_' in part]
             assert len(sample_name) == 0 or len(sample_name) == 1
 
-            file_string = filepath_parts[-1]
+            file_string = filepath.parts[-1]
 
             if len(sample_name) == 0:
 
