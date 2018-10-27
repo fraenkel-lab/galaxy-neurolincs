@@ -25,7 +25,7 @@ def removeEmptyFolders(path, removeRoot=True):
 
 # Usage: python3 ~/galaxy-neurolincs/scripts/clean_CGND.py
 
-# TODO this script now needs to take into account level1_fastq / level2_bam / level3_vcf
+# Note: should be idempotent
 
 if __name__ == '__main__':
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
             else: print('possibly too many sample names in: ' + filepath)
 
 
-    removeEmptyFolders(base_filepath)
+    removeEmptyFolders(base_path)
 
 
 
