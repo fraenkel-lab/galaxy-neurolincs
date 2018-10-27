@@ -40,6 +40,7 @@ if __name__ == '__main__':
 
             CGND_ID = [part for part in filepath.parts if 'CGND_' in part and len(part) == 10]
             assert len(CGND_ID) == 1
+            CGND_ID = CGND_ID[0]
 
             sample_name = [part for part in filepath.parts if 'Sample_' in part]
             assert len(sample_name) == 0 or len(sample_name) == 1
