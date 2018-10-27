@@ -1,4 +1,6 @@
 import os, sys, pickle
+from pathlib import Path
+
 
 def flatten(list_of_lists): return [item for sublist in list_of_lists for item in sublist]
 
@@ -20,38 +22,36 @@ def removeEmptyFolders(path, removeRoot=True):
 	if len(files) == 0 and removeRoot:
 		os.rmdir(path)
 
-# ~/galaxy-neurolincs/scripts/sync_nygc_push.py PUSHED_FROM_NYGC/CGND_***** other_genomics/level1_fastq/CGND_*****
+# python3 ~/galaxy-neurolincs/scripts/sync_nygc_push.py
+
+# TODO: make sure the time comparison is correct, someday...
 
 if __name__ == '__main__':
 
-	srcdir = sys.argv[1]
-	targetdir = sys.argv[2]
+    srcdir = Path('/pool/data/globus/PUSHED_FROM_NYGC')
+	targetdir = Path('/pool/data/globus/other_genomics')
 
-	pushed_files_base_filepath = "/pool/data/globus/"+srcdir
-	local_files_base_filepath = "/pool/data/globus/"+targetdir
-
-	all_pushed_files = flatten([[os.path.join(path.split(pushed_files_base_filepath)[1], file) for file in files] for path, subdirs, files in os.walk(pushed_files_base_filepath) if len(files)])
-	all_local_files = flatten([[os.path.join(path.split(local_files_base_filepath)[1], file) for file in files] for path, subdirs, files in os.walk(local_files_base_filepath) if len(files)])
+    new_files = [f.relative_to(srcdir) for f in srcdir.glob('**/*.*') if f.is_file()]
+    old_files = [f.relative_to(targetdir) for f in targetdir.glob('**/*.*') if f.is_file()]
 
 	# Handle new files
-	all_new_files = list(set(all_pushed_files) - set(all_local_files))
+	all_new_files = list(set(new_files) - set(old_files))
 
 	for file in all_new_files:
-		os.renames(pushed_files_base_filepath+file, local_files_base_filepath+file)
+		(srcdir / file).rename(targetdir / file)
 
 	# Handle updated files
 	all_updated_files = list(set(all_pushed_files) & set(all_local_files))
 
-	print("Files which we seem to have more recent copies of in "+local_files_base_filepath+":")
-
 	for file in all_updated_files:
 
-		if os.path.getctime(pushed_files_base_filepath+file) > os.path.getmtime(local_files_base_filepath+file):
+		if (srcdir / file).stat().st_mtime > (targetdir / file).stat().st_mtime:
 
-			os.renames(pushed_files_base_filepath+file, local_files_base_filepath+file)
+			(srcdir / file).rename(targetdir / file)
 
 		else:
 
-			print(local_files_base_filepath+file)
+			print("Files which we seem to have more recent copies of in "+srcdir+":")
+			print(file)
 
-	removeEmptyFolders(pushed_files_base_filepath)
+	removeEmptyFolders(srcdir)
