@@ -11,8 +11,6 @@ if __name__ == '__main__':
 		# if it contains a subdirectory called checksum
 		if 'checksum' in subdirectories:
 
-			print(directory)
-
 			# for each file in the directory
 			for file in files:
 
@@ -26,6 +24,7 @@ if __name__ == '__main__':
 
 				if str(our_checksum) != str(their_checksum):
 					print()
+					print(directory)
 					print(file)
 					print("our checksum: " + str(our_checksum))
 					print("their checksum: " + str(their_checksum))
