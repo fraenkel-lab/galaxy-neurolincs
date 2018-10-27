@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
                 if any(['StructuralVariants' in part for part in filepath.parts]):
                     filepath.rename(base_path / '3_vcf' / CGND_ID / 'StructuralVariants' / file_string)
-                elif any(['ExpansionHunter' in part for part in filepath.parts])::
+                elif any(['ExpansionHunter' in part for part in filepath.parts]):
                     filepath.rename(base_path / '3_vcf' / CGND_ID / 'ExpansionHunter' / file_string)
                 else: print('no sample name in: ' + filepath)
 
