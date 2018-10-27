@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
                 assert data_level != 0
 
-                if 'StructuralVariants' in filepath:
+                if any(['StructuralVariants' in part for part in filepath.parts]):
                     os.makedirs(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants', exist_ok=True)
                     filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants' / file_string)
                 else:
