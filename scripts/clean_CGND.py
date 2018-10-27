@@ -23,7 +23,7 @@ def removeEmptyFolders(path, removeRoot=True):
         os.rmdir(path)
 
 
-# Usage: python ~/galaxy-neurolincs/scripts/clean_CGND.py
+# Usage: python3 ~/galaxy-neurolincs/scripts/clean_CGND.py
 
 # TODO this script now needs to take into account level1_fastq / level2_bam / level3_vcf
 
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     for filepath in files:
 
-        if filepath[-4:] == '.md5': os.remove(filepath)
+        if filepath.suffix == '.md5': os.remove(filepath)
 
         else:
             filepath_parts = filepath.split('/')
