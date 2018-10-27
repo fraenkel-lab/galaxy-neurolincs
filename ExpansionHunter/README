@@ -1,0 +1,11 @@
+VCF FILES (SAMPLE_NAME.eh.vcf):
+
+For each sample and for each locus the VCF file is formatted according to the ExpansionHunter specification, available at https://github.com/Illumina/ExpansionHunter/wiki/Outputs
+
+GENOTYPE TABLE (*.genotype.txt):
+
+The table reports the genotype for each sample and gene as estimated by ExpansionHunter, where:
+
+1. “Genotype”: a pair of repeat sizes separated by / for diploid chromosomes and a single repeat size for haploid chromosomes
+2. “GenotypeCi”: confidence interval for the size of each repeat allele
+3. “GenotypeSupport”: the number of spanning, flanking, and in-repeat reads (in this order) consistent with each repeat allele
