@@ -43,7 +43,7 @@ if __name__ == '__main__':
         (srcdir / file).rename(targetdir / file)
 
     # Handle updated files
-    all_updated_files = list(set(all_pushed_files) & set(all_local_files))
+    all_updated_files = list(set(new_files) & set(old_files))
 
     for file in all_updated_files:
 
