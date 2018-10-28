@@ -45,49 +45,47 @@ if __name__ == '__main__':
             sample_name = [part for part in filepath.parts if 'Sample_' in part]
             assert len(sample_name) == 0 or len(sample_name) == 1
 
-            file_string = filepath.parts[-1]
-
             if len(sample_name) == 0:
 
                 if any(['StructuralVariants' in part for part in filepath.parts]):
                     os.makedirs(base_path / '3_vcf' / CGND_ID / 'StructuralVariants', exist_ok=True)
-                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'StructuralVariants' / file_string)
+                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'StructuralVariants' / filepath.name)
                 elif any(['ExpansionHunter' in part for part in filepath.parts]):
                     os.makedirs(base_path / '3_vcf' / CGND_ID / 'ExpansionHunter', exist_ok=True)
-                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'ExpansionHunter' / file_string)
+                    filepath.rename(base_path / '3_vcf' / CGND_ID / 'ExpansionHunter' / filepath.name)
                 else: print('no sample name in: ' + filepath)
 
             elif len(sample_name) == 1:
 
                 data_level = 0
-                if '.fastq.gz' in file_string:
+                if '.fastq.gz' in filepath.name:
                     data_level = '1_fastq'
 
-                if '.bam' in file_string or'.bai' in file_string or'.cram' in file_string or'.crai' in file_string:
+                if '.bam' in filepath.name or'.bai' in filepath.name or'.cram' in filepath.name or'.crai' in filepath.name:
                     data_level = '2_bam'
 
-                if ('.haplotypeCalls.er.raw.vcf.gz' in file_string or
-                    '.haplotypeCalls.er.raw.vcf.gz.tbi' in file_string or
-                    '.recalibrated.haplotypeCalls.vcf.gz' in file_string or
-                    '.recalibrated.haplotypeCalls.vcf.gz.tbi' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.vcf.gz' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.vcf.gz.tbi' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.clinical.txt' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.coding.txt' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.coding_rare.txt' in file_string or
-                    '.recalibrated.haplotypeCalls.annotated.txt' in file_string or
-                    '.genomestrip.del.bed' in file_string or
-                    '.eh.vcf' in file_string):
+                if ('.haplotypeCalls.er.raw.vcf.gz' in filepath.name or
+                    '.haplotypeCalls.er.raw.vcf.gz.tbi' in filepath.name or
+                    '.recalibrated.haplotypeCalls.vcf.gz' in filepath.name or
+                    '.recalibrated.haplotypeCalls.vcf.gz.tbi' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.vcf.gz' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.vcf.gz.tbi' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.clinical.txt' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.coding.txt' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.coding_rare.txt' in filepath.name or
+                    '.recalibrated.haplotypeCalls.annotated.txt' in filepath.name or
+                    '.genomestrip.del.bed' in filepath.name or
+                    '.eh.vcf' in filepath.name):
                     data_level = '3_vcf'
 
                 assert data_level != 0
 
                 if any(['StructuralVariants' in part for part in filepath.parts]):
                     os.makedirs(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants', exist_ok=True)
-                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants' / file_string)
+                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / 'StructuralVariants' / filepath.name)
                 else:
                     os.makedirs(base_path / data_level / CGND_ID / sample_name[0], exist_ok=True)
-                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / file_string)
+                    filepath.rename(base_path / data_level / CGND_ID / sample_name[0] / filepath.name)
 
             else: print('possibly too many sample names in: ' + filepath)
 

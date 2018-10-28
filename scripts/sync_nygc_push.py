@@ -38,6 +38,8 @@ if __name__ == '__main__':
     all_new_files = list(set(new_files) - set(old_files))
 
     for file in all_new_files:
+
+        os.makedirs((srcdir / file.parent), exist_ok=True)
         (srcdir / file).rename(targetdir / file)
 
     # Handle updated files
@@ -47,6 +49,7 @@ if __name__ == '__main__':
 
         if (srcdir / file).stat().st_mtime > (targetdir / file).stat().st_mtime:
 
+            os.makedirs((srcdir / file.parent), exist_ok=True)
             (srcdir / file).rename(targetdir / file)
 
         else:
