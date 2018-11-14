@@ -16,19 +16,25 @@ python '$__tool_directory__/export_to_cluster.py' -d '/globus/${exp.consortium}_
             <param type="select" name="consortium" label="Consortium">
                 <option value="aals" selected="true">AnswerALS</option>
                 <option value="neurolincs">NeuroLINCS</option>
+                <option value="lbc">Lothian Birth Cohort</option>
             </param>
             <when value="neurolincs">
                 <param type="select" name="experiment" label="Experiment">
-                    <option value="0_iPSC" selected="true">0_iPSC</option>
-                    <option value="1_iMN">1_iMN</option>
-                    <option value="2_diMN18">2_diMN18</option>
-                    <option value="3_diMN32">3_diMN32</option>
+                    <option value="0_iPSC" selected="true">1_iPSC</option>
+                    <option value="1_iMN">2_iMN</option>
+                    <option value="2_diMN18">3_diMN18</option>
+                    <option value="3_diMN32">4_diMN32</option>
                 </param>
             </when>
             <when value="aals">
                 <param type="select" name="experiment" label="Experiment">
-                    <option value="4_protocol_selection" selected="true">4_protocol_selection</option>
                     <option value="5_100_lines">5_100_lines</option>
+                    <option value="6_protocol_selection" selected="true">6_protocol_selection</option>
+                </param>
+            </when>
+            <when value="lbc">
+                <param type="select" name="experiment" label="Experiment">
+                    <option value="6_protocol_selection" selected="true">6_protocol_selection</option>
                 </param>
             </when>
         </conditional>
@@ -41,23 +47,23 @@ python '$__tool_directory__/export_to_cluster.py' -d '/globus/${exp.consortium}_
             </param>
             <when value="epigenomics">
                 <param type="select" name="level" label="Data Level">
-                    <option value="level1_fastq" selected="true">level1_fastq</option>
-                    <option value="level2_bam">level2_bam</option>
-                    <option value="level3_peaks">level3_peaks</option>
+                    <option value="1_fastq" selected="true">1_fastq</option>
+                    <option value="2_bam">2_bam</option>
+                    <option value="3_peaks">3_peaks</option>
                 </param>
             </when>
             <when value="transcriptomics">
                 <param type="select" name="level" label="Data Level">
-                    <option value="level1_fastq" selected="true">level1_fastq</option>
-                    <option value="level2_bam">level2_bam</option>
-                    <option value="level3_counts">level3_counts</option>
+                    <option value="1_fastq" selected="true">1_fastq</option>
+                    <option value="2_bam">2_bam</option>
+                    <option value="3_counts">3_counts</option>
                 </param>
             </when>
             <when value="proteomics">
                 <param type="select" name="level" label="Data Level">
-                    <option value="level1_wiff" selected="true">level1_wiff</option>
-                    <option value="level2_mzml">level2_mzml</option>
-                    <option value="level3_spectra">level3_spectra</option>
+                    <option value="1_wiff" selected="true">1_wiff</option>
+                    <option value="2_mzml">2_mzml</option>
+                    <option value="3_spectra">3_spectra</option>
                 </param>
             </when>
         </conditional>
