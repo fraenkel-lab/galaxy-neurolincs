@@ -24,7 +24,9 @@ if __name__ == '__main__':
 
     # other_genomics             = all_genomics_subfiles("/pool/data/globus/other_genomics/")
 
-    files = aals_epigenomics + aals_genomics + aals_proteomics + aals_transcriptomics + neurolincs_epigenomics + neurolincs_genomics + neurolincs_proteomics + neurolincs_transcriptomics + lbc_epigenomic + lbc_proteomic + lbc_transcriptomics #+ other_genomics
+    files = aals_epigenomics + aals_genomics + aals_proteomics + aals_transcriptomics + \
+            neurolincs_epigenomics + neurolincs_genomics + neurolincs_proteomics + neurolincs_transcriptomics + \
+            lbc_epigenomics + lbc_proteomics + lbc_transcriptomics #+ other_genomics
 
     [print(file) for file in files]
 

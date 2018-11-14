@@ -33,17 +33,25 @@ desired_ownerships = {
     'aals_genomics'              : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
     'aals_proteomics'            : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
     'aals_transcriptomics'       : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+
     'neurolincs_epigenomics'     : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
     'neurolincs_genomics'        : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
     'neurolincs_proteomics'      : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
     'neurolincs_transcriptomics' : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+
     'other_genomics'             : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+
+    'lbc_epigenomics'            : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+    'lbc_proteomics'             : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+    'lbc_transcriptomics'        : {'owner':'root', 'group':'aals_members', 'mode':mode['owner can do anything, group can read and execute, others have no permissions']},
+
     'PUSHED_FROM_CEDARS'         : {                'group':'cshs',         'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_GALAXY'         : {                'group':'galaxy',       'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_MIT'            : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_NYGC'           : {                'group':'nygc',         'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_UCI'            : {                'group':'uci',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'PUSHED_FROM_UCSF'           : {                'group':'ucsf',         'mode':mode['owner can do anything, group can do anything, others have no permissions']},
+
     'RNAseq_base'                : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
     'genomics_base'              : {                'group':'mit',          'mode':mode['owner can do anything, group can do anything, others have no permissions']},
 }
