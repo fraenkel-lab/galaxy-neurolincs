@@ -16,7 +16,7 @@ if __name__ == '__main__':
     transcriptomics            = all_subfiles("/pool/data/globus/transcriptomics/")
 
 
-    files = genomics + neurolincs_genomics + epigenomics + proteomics + transcriptomics
+    files = genomics + epigenomics + proteomics + transcriptomics
 
     [print(file) for file in files]
 
