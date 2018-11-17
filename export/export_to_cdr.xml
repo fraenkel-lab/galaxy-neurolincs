@@ -2,7 +2,7 @@
 
     <command detect_errors="aggressive">
 <![CDATA[
-python '$__tool_directory__/export_to_cluster.py' -d '/globus/${exp.consortium}_${lvl.assay}/${lvl.level}/${exp.experiment}/${protocol}' -p "/globus/"
+python '$__tool_directory__/export_to_cluster.py' -d '/globus/${lvl.assay}/${lvl.level}/${exp.experiment}/${protocol}' -p "/globus/"
 #for $d in $datasets
     '${d}' '${d.name}' '${d.ext}'
 #end for
@@ -12,32 +12,14 @@ python '$__tool_directory__/export_to_cluster.py' -d '/globus/${exp.consortium}_
     <inputs>
         <param name="datasets" type="data" format="data" multiple="true" label="Datasets to export" />
 
-        <conditional name="exp">
-            <param type="select" name="consortium" label="Consortium">
-                <option value="aals" selected="true">AnswerALS</option>
-                <option value="neurolincs">NeuroLINCS</option>
-                <option value="lbc">Lothian Birth Cohort</option>
-            </param>
-            <when value="neurolincs">
-                <param type="select" name="experiment" label="Experiment">
-                    <option value="0_iPSC" selected="true">1_iPSC</option>
-                    <option value="1_iMN">2_iMN</option>
-                    <option value="2_diMN18">3_diMN18</option>
-                    <option value="3_diMN32">4_diMN32</option>
-                </param>
-            </when>
-            <when value="aals">
-                <param type="select" name="experiment" label="Experiment">
-                    <option value="5_100_lines">5_100_lines</option>
-                    <option value="6_protocol_selection" selected="true">6_protocol_selection</option>
-                </param>
-            </when>
-            <when value="lbc">
-                <param type="select" name="experiment" label="Experiment">
-                    <option value="6_protocol_selection" selected="true">6_protocol_selection</option>
-                </param>
-            </when>
-        </conditional>
+        <param type="select" name="experiment" label="Experiment">
+            <option value="0_iPSC" selected="true">1_iPSC</option>
+            <option value="1_iMN">2_iMN</option>
+            <option value="2_diMN18">3_diMN18</option>
+            <option value="3_diMN32">4_diMN32</option>
+            <option value="5_100_lines">5_100_lines</option>
+            <option value="6_protocol_selection" selected="true">6_protocol_selection</option>
+        </param>
 
         <conditional name="lvl">
             <param type="select" name="assay" label="Assay">
