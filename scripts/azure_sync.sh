@@ -7,6 +7,6 @@ for VAR in "${VARS[@]}"
 do
         echo /pool/data/globus/$VAR
 
-        azcopy sync /pool/data/globus/$VAR https://thecdr.blob.core.windows.net/globus/$VAR?$SAS --recursive=true
+        azcopy sync "/pool/data/globus/$VAR" "https://thecdr.blob.core.windows.net/globus/$VAR?$SAS" --recursive=true
 done
 
