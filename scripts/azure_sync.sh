@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VARS=('neurolincs_genomics', 'aals_genomics', 'other_genomics', 'epigenomics', 'proteomics', 'transcriptomics')
+VARS=('genomics', 'genomics_other', 'epigenomics', 'proteomics', 'transcriptomics')
 
 for VAR in "${VARS[@]}"
 do
