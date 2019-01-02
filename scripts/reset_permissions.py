@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 desired_users = ['root', 'sync', 'localskm', 'pulkit', 'greg',
-                'galaxy', 'vidya', 'andrea', 'lilith', 'leandro', 'jenny',
+                'galaxy', 'vidya', 'andrea', 'lilith', 'victoria', 'leandro', 'jenny',
                 'barry', 'terri', 'blah', 'skm', 'lenail', 'fraenkel', 'iamjli', 'divyar' ]
 
 system_users = ['/usr/sbin/nologin','/bin/nologin','/bin/false']
@@ -15,11 +15,11 @@ desired_groups = {
     'mit' : ['iamjli', 'skm', 'fraenkel', 'lenail', 'divyar'],
     'ucsf': ['leandro'],
     'uci' : ['jenny'],
-    'cshs': ['vidya','andrea','lilith'],
+    'cshs': ['vidya','andrea','lilith','victoria'],
     'nygc': ['pulkit'],
     'pm'  : ['barry', 'terri'],
     'galaxy': ['galaxy', 'lenail', 'iamjli'],
-    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','barry','terri','galaxy'],
+    'aals_members': ['iamjli','skm','fraenkel','lenail','leandro','jenny','vidya','andrea','lilith','victoria','barry','terri','galaxy'],
 }
 
 mode = {
