@@ -29,7 +29,7 @@ def removeEmptyFolders(path, removeRoot=True):
 if __name__ == '__main__':
 
     srcdir = Path('/pool/data/globus/PUSHED_FROM_NYGC')
-    targetdir = Path('/pool/data/globus/other_genomics')
+    targetdir = Path('/pool/data/globus/genomics_other')
 
     new_files = [f.relative_to(srcdir) for f in srcdir.glob('**/*.*') if f.is_file()]
     old_files = [f.relative_to(targetdir) for f in targetdir.glob('**/*.*') if f.is_file()]
