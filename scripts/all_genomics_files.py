@@ -10,5 +10,5 @@ if __name__ == '__main__':
     all_aals_files =        flatten([[os.path.join(path, file) for file in files] for path, subdirs, files in os.walk(aals_genomics) if len(files)])
     all_other_files =       flatten([[os.path.join(path, file) for file in files] for path, subdirs, files in os.walk(other_genomics) if len(files)])
 
-    [print(file) for file in all_aals_files + all_neurolincs_files + all_other_files]
+    [print(file) for file in all_aals_files + all_other_files]
 
